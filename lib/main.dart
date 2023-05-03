@@ -3,6 +3,7 @@ import 'package:lmsapp/pages/loading.dart';
 import 'package:lmsapp/pages/login.dart';
 import 'package:lmsapp/pages/signup.dart';
 
+
 void main() {
   runApp(const LMSApp());
 }
@@ -60,38 +61,38 @@ class LandingPageA extends StatelessWidget {
       backgroundColor: Color.fromARGB(255, 31, 31, 57),
       body: Center(
           child: Padding(
-        padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            const SizedBox(height: 40),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                TextButton(
-                    onPressed: () {
-                      Navigator.of(context).push(_createRouteA());
-                    },
-                    child: const Text(
-                      'Next',
-                      style: nextStyle,
-                    )),
+            padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                const SizedBox(height: 40),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    TextButton(
+                        onPressed: () {
+                          Navigator.of(context).push(_createRouteA());
+                        },
+                        child: const Text(
+                          'Next',
+                          style: nextStyle,
+                        )),
+                  ],
+                ),
+                const SizedBox(height: 70),
+                Image.network(
+                    'https://cdn.dribbble.com/users/6273831/screenshots/18259879/__________________1.png'),
+                const Text('Numerous free trial course',
+                    style: headerStyle, textAlign: TextAlign.center),
+                const SizedBox(height: 15),
+                const Padding(
+                  padding: EdgeInsets.fromLTRB(40, 0, 40, 0),
+                  child: Text('Free courses for you to find your way of learning',
+                      style: descStyle, textAlign: TextAlign.center),
+                )
               ],
             ),
-            const SizedBox(height: 70),
-            Image.network(
-                'https://cdn.dribbble.com/users/6273831/screenshots/18259879/__________________1.png'),
-            const Text('Numerous free trial course',
-                style: headerStyle, textAlign: TextAlign.center),
-            const SizedBox(height: 15),
-            const Padding(
-              padding: EdgeInsets.fromLTRB(40, 0, 40, 0),
-              child: Text('Free courses for you to find your way of learning',
-                  style: descStyle, textAlign: TextAlign.center),
-            )
-          ],
-        ),
-      )),
+          )),
     );
   }
 }
@@ -99,7 +100,7 @@ class LandingPageA extends StatelessWidget {
 Route _createRouteA() {
   return PageRouteBuilder(
     pageBuilder: (context, animation, secondaryAnimation) =>
-        const LandingPageB(),
+    const LandingPageB(),
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       const begin = Offset(1.0, 0.0);
       const end = Offset.zero;
@@ -124,40 +125,40 @@ class LandingPageB extends StatelessWidget {
       backgroundColor: Color.fromARGB(255, 31, 31, 57),
       body: Center(
           child: Padding(
-        padding: const EdgeInsets.fromLTRB(10, 5, 10, 5),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            const SizedBox(height: 40),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                TextButton(
-                    onPressed: () {
-                      Navigator.of(context).push(_createRouteB());
-                    },
-                    child: const Text(
-                      'Next',
-                      style: nextStyle,
-                    )),
+            padding: const EdgeInsets.fromLTRB(10, 5, 10, 5),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                const SizedBox(height: 40),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    TextButton(
+                        onPressed: () {
+                          Navigator.of(context).push(_createRouteB());
+                        },
+                        child: const Text(
+                          'Next',
+                          style: nextStyle,
+                        )),
+                  ],
+                ),
+                const SizedBox(height: 70),
+                Image.network(
+                    'https://cdni.iconscout.com/illustration/premium/thumb/boy-studying-online-2995919-2493772.png'),
+                const Text('Quick and Easy learning',
+                    style: headerStyle, textAlign: TextAlign.center),
+                const SizedBox(height: 15),
+                const Padding(
+                  padding: EdgeInsets.fromLTRB(30, 5, 30, 5),
+                  child: Text(
+                      'Easy and fast learning at any time to help you  improve various skills.',
+                      style: descStyle,
+                      textAlign: TextAlign.center),
+                )
               ],
             ),
-            const SizedBox(height: 70),
-            Image.network(
-                'https://cdni.iconscout.com/illustration/premium/thumb/boy-studying-online-2995919-2493772.png'),
-            const Text('Quick and Easy learning',
-                style: headerStyle, textAlign: TextAlign.center),
-            const SizedBox(height: 15),
-            const Padding(
-              padding: EdgeInsets.fromLTRB(30, 5, 30, 5),
-              child: Text(
-                  'Easy and fast learning at any time to help you  improve various skills.',
-                  style: descStyle,
-                  textAlign: TextAlign.center),
-            )
-          ],
-        ),
-      )),
+          )),
     );
   }
 }
@@ -165,7 +166,7 @@ class LandingPageB extends StatelessWidget {
 Route _createRouteB() {
   return PageRouteBuilder(
     pageBuilder: (context, animation, secondaryAnimation) =>
-        const LandingPageC(),
+    const LandingPageC(),
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       const begin = Offset(1.0, 0.0);
       const end = Offset.zero;
@@ -190,65 +191,65 @@ class LandingPageC extends StatelessWidget {
       backgroundColor: Color.fromARGB(255, 31, 31, 57),
       body: Center(
           child: Padding(
-        padding: const EdgeInsets.fromLTRB(10, 5, 10, 5),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Image.network(
-                'https://cdni.iconscout.com/illustration/premium/thumb/boy-studying-online-2995919-2493772.png'),
-            const Text('Create your own study plan',
-                style: headerStyle, textAlign: TextAlign.center),
-            const SizedBox(height: 15),
-            const Padding(
-              padding: EdgeInsets.fromLTRB(30, 5, 30, 5),
-              child: Text(
-                  'Study according to the study plan, make study more motivated.',
-                  style: descStyle,
-                  textAlign: TextAlign.center),
+            padding: const EdgeInsets.fromLTRB(10, 5, 10, 5),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Image.network(
+                    'https://cdni.iconscout.com/illustration/premium/thumb/boy-studying-online-2995919-2493772.png'),
+                const Text('Create your own study plan',
+                    style: headerStyle, textAlign: TextAlign.center),
+                const SizedBox(height: 15),
+                const Padding(
+                  padding: EdgeInsets.fromLTRB(30, 5, 30, 5),
+                  child: Text(
+                      'Study according to the study plan, make study more motivated.',
+                      style: descStyle,
+                      textAlign: TextAlign.center),
+                ),
+                const SizedBox(height: 80),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(30, 5, 30, 5),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute<void>(
+                              builder: (BuildContext context) {
+                                return const Scaffold(
+                                  body: LoginScreen(),
+                                );
+                              },
+                            ));
+                          },
+                          style: buttonStyle,
+                          child: const Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Text("Login"),
+                          )),
+                      ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute<void>(
+                              builder: (BuildContext context) {
+                                return const Scaffold(
+                                  body: SignUp(),
+                                );
+                              },
+                            ));
+                          },
+                          style: buttonStyleB,
+                          child: const Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Text("Sign Up"),
+                          )),
+                    ],
+                  ),
+                )
+              ],
             ),
-            const SizedBox(height: 80),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(30, 5, 30, 5),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(context, MaterialPageRoute<void>(
-                          builder: (BuildContext context) {
-                            return const Scaffold(
-                              body: LoginScreen(),
-                            );
-                          },
-                        ));
-                      },
-                      style: buttonStyle,
-                      child: const Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Text("Login"),
-                      )),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(context, MaterialPageRoute<void>(
-                          builder: (BuildContext context) {
-                            return const Scaffold(
-                              body: SignUp(),
-                            );
-                          },
-                        ));
-                      },
-                      style: buttonStyleB,
-                      child: const Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Text("Sign Up"),
-                      )),
-                ],
-              ),
-            )
-          ],
-        ),
-      )),
+          )),
     );
   }
 }
