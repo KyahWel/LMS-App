@@ -1,5 +1,55 @@
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:lmsapp/pages/login.dart';
+
+const TextStyle headerStyle = TextStyle(
+    fontSize: 40,
+    fontWeight: FontWeight.bold,
+    color: Color.fromARGB(255, 0, 62, 109));
+
+const TextStyle headerStyleB = TextStyle(
+    fontSize: 25,
+    fontWeight: FontWeight.bold,
+    color: Color.fromARGB(255, 0, 62, 109));
+
+final ButtonStyle buttonStyle = ElevatedButton.styleFrom(
+    backgroundColor: Colors.green,
+    textStyle: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold));
+
+final FirebaseAuth _auth = FirebaseAuth.instance;
+
+void addUser(
+  String name,
+  String email,
+  String gender,
+  String address,
+  String age,
+  String contact,
+  String password,
+  String username,
+) async {
+  try {
+    // Get a reference to the Firestore collection
+    CollectionReference users = FirebaseFirestore.instance.collection('users');
+
+    // Add a new document with a generated ID
+    await users.add({
+      'name': name,
+      'email': email,
+      'age': age,
+      'gender': gender,
+      'address': address,
+      'contact': contact,
+      'username': username,
+      'password': password
+    });
+    print('User added to Firestore!');
+  } catch (e) {
+    print('Error adding user to Firestore: $e');
+  }
+}
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
@@ -9,20 +59,6 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
-  static const TextStyle headerStyle = TextStyle(
-      fontSize: 40,
-      fontWeight: FontWeight.bold,
-      color: Color.fromARGB(255, 0, 62, 109));
-
-  static const TextStyle headerStyleB = TextStyle(
-      fontSize: 25,
-      fontWeight: FontWeight.bold,
-      color: Color.fromARGB(255, 0, 62, 109));
-
-  final ButtonStyle buttonStyle = ElevatedButton.styleFrom(
-      backgroundColor: Colors.green,
-      textStyle: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold));
-
   List<DropdownMenuItem<String>> get dropDownGender {
     List<DropdownMenuItem<String>> menuItems = [
       const DropdownMenuItem(value: "Male", child: Text("Male")),
@@ -32,6 +68,54 @@ class _SignUpState extends State<SignUp> {
   }
 
   String selectedValueGender = "Male";
+  final fullnameController = TextEditingController();
+  final ageController = TextEditingController();
+  final addressController = TextEditingController();
+  final contactController = TextEditingController();
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+  final usernameController = TextEditingController();
+
+  Future<void> signUpAuth() async {
+    try {
+      await _auth.createUserWithEmailAndPassword(
+        email: emailController.text.trim(),
+        password: passwordController.text.trim(),
+      );
+      print('User registered successfully!');
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'weak-password') {
+        print('The password provided is too weak.');
+      } else if (e.code == 'email-already-in-use') {
+        print('The account already exists for that email.');
+      }
+    } catch (e) {
+      print('Error registering user: $e');
+    }
+  }
+
+  Future<void> signUpUser() async {
+    try {
+      // Get a reference to the Firestore collection
+      CollectionReference users =
+          FirebaseFirestore.instance.collection('users');
+
+      // Add a new document with a generated ID
+      await users.add({
+        'name': fullnameController.text.trim(),
+        'email': emailController.text.trim(),
+        'age': ageController.text.trim(),
+        'gender': selectedValueGender,
+        'address': addressController.text.trim(),
+        'contact': contactController.text.trim(),
+        'username': usernameController.text.trim(),
+        'password': passwordController.text.trim()
+      });
+      print('User added to Firestore!');
+    } catch (e) {
+      print('Error adding user to Firestore: $e');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +147,8 @@ class _SignUpState extends State<SignUp> {
                   ],
                 ),
                 const SizedBox(height: 15),
-                TextFormField(
+                TextField(
+                  controller: fullnameController,
                   decoration: const InputDecoration(
                     contentPadding: EdgeInsets.all(8),
                     labelText: 'Full Name',
@@ -106,7 +191,8 @@ class _SignUpState extends State<SignUp> {
                     SizedBox(
                       width: 150,
                       height: 60,
-                      child: TextFormField(
+                      child: TextField(
+                        controller: ageController,
                         decoration: const InputDecoration(
                           contentPadding: EdgeInsets.all(8),
                           labelText: 'Age',
@@ -117,7 +203,8 @@ class _SignUpState extends State<SignUp> {
                   ],
                 ),
                 const SizedBox(height: 10),
-                TextFormField(
+                TextField(
+                  controller: addressController,
                   decoration: const InputDecoration(
                     contentPadding: EdgeInsets.all(8),
                     labelText: 'Full Address',
@@ -130,7 +217,8 @@ class _SignUpState extends State<SignUp> {
                     SizedBox(
                       width: 150,
                       height: 60,
-                      child: TextFormField(
+                      child: TextField(
+                        controller: contactController,
                         decoration: const InputDecoration(
                           contentPadding: EdgeInsets.all(8),
                           labelText: 'Contact #',
@@ -142,7 +230,8 @@ class _SignUpState extends State<SignUp> {
                     SizedBox(
                       width: 160,
                       height: 60,
-                      child: TextFormField(
+                      child: TextField(
+                        controller: emailController,
                         decoration: const InputDecoration(
                           contentPadding: EdgeInsets.all(8),
                           labelText: 'Email Address',
@@ -159,7 +248,8 @@ class _SignUpState extends State<SignUp> {
                   ],
                 ),
                 const SizedBox(height: 15),
-                TextFormField(
+                TextField(
+                  controller: usernameController,
                   decoration: const InputDecoration(
                     contentPadding: EdgeInsets.all(8),
                     labelText: 'Username',
@@ -167,7 +257,8 @@ class _SignUpState extends State<SignUp> {
                   ),
                 ),
                 const SizedBox(height: 15),
-                TextFormField(
+                TextField(
+                  controller: passwordController,
                   obscureText: true,
                   enableSuggestions: false,
                   autocorrect: false,
@@ -179,7 +270,7 @@ class _SignUpState extends State<SignUp> {
                   ),
                 ),
                 const SizedBox(height: 15),
-                TextFormField(
+                TextField(
                   obscureText: true,
                   enableSuggestions: false,
                   autocorrect: false,
@@ -195,7 +286,18 @@ class _SignUpState extends State<SignUp> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          // signUpAuth();
+                          // print('Email $emailController.text');
+                          // print('Password $passwordController.text');
+                          Navigator.push(context, MaterialPageRoute<void>(
+                            builder: (BuildContext context) {
+                              return const Scaffold(
+                                body: LoginScreen(),
+                              );
+                            },
+                          ));
+                        },
                         style: buttonStyle,
                         child: const Padding(
                           padding: EdgeInsets.all(8.0),

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:lmsapp/pages/signup.dart';
 import 'package:lmsapp/pages/dashboard.dart';
-import 'package:lmsapp/pages/profile.dart';
+import 'package:lmsapp/pages/forgotpassword.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:lmsapp/pages/widgets/mainPage.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -14,6 +16,28 @@ class _LoginScreenState extends State<LoginScreen> {
   final ButtonStyle buttonStyle = ElevatedButton.styleFrom(
       backgroundColor: Colors.green,
       textStyle: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold));
+
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+  bool hasError = false;
+
+  Future signIn() async {
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+          email: emailController.text.trim(),
+          password: passwordController.text.trim());
+    } on FirebaseAuthException catch (e) {
+      return hasError = true;
+    }
+    return hasError = false;
+  }
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -49,23 +73,26 @@ class _LoginScreenState extends State<LoginScreen> {
                         ]),
                   ),
                   const SizedBox(height: 50),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 25, vertical: 16),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 25, vertical: 16),
                     child: TextField(
-                      decoration: InputDecoration(
+                      controller: emailController,
+                      decoration: const InputDecoration(
                         labelText: 'Username',
                         border: OutlineInputBorder(),
                         hintText: 'Enter Username',
                       ),
                     ),
                   ),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 25),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 25),
                     child: TextField(
+                      controller: passwordController,
                       obscureText: true,
                       enableSuggestions: false,
                       autocorrect: false,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         labelText: 'Password',
                         border: OutlineInputBorder(),
                         hintText: 'Enter Password',
@@ -75,27 +102,51 @@ class _LoginScreenState extends State<LoginScreen> {
                   const SizedBox(height: 50),
                   ElevatedButton(
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => ProfilePage()),
-                        );
+                        print(emailController.text);
+                        print(passwordController.text);
+                        signIn();
+                        if (!hasError) {
+                          Navigator.push(context, MaterialPageRoute<void>(
+                            builder: (BuildContext context) {
+                              return const Scaffold(
+                                body: mainPage(),
+                              );
+                            },
+                          ));
+                        }
                       },
                       style: buttonStyle,
                       child: const Padding(
                         padding: EdgeInsets.all(8.0),
                         child: Text("Login"),
                       )),
-                  TextButton(
-                      onPressed: () {
-                        Navigator.push(context, MaterialPageRoute<void>(
-                          builder: (BuildContext context) {
-                            return const Scaffold(
-                              body: SignUp(),
-                            );
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      TextButton(
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute<void>(
+                              builder: (BuildContext context) {
+                                return const Scaffold(
+                                  body: SignUp(),
+                                );
+                              },
+                            ));
                           },
-                        ));
-                      },
-                      child: const Text("Create an Account"))
+                          child: const Text("Create an Account")),
+                      TextButton(
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute<void>(
+                              builder: (BuildContext context) {
+                                return const Scaffold(
+                                  body: ForgetScreen(),
+                                );
+                              },
+                            ));
+                          },
+                          child: const Text("Forgot Password"))
+                    ],
+                  )
                 ],
               )),
         ),
