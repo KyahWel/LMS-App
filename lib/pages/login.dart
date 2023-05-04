@@ -27,9 +27,9 @@ class _LoginScreenState extends State<LoginScreen> {
           email: emailController.text.trim(),
           password: passwordController.text.trim());
     } on FirebaseAuthException catch (e) {
-      return hasError = true;
+      hasError = true;
     }
-    return hasError = false;
+    hasError = false;
   }
 
   @override
@@ -110,6 +110,14 @@ class _LoginScreenState extends State<LoginScreen> {
                             builder: (BuildContext context) {
                               return const Scaffold(
                                 body: mainPage(),
+                              );
+                            },
+                          ));
+                        } else {
+                          Navigator.push(context, MaterialPageRoute<void>(
+                            builder: (BuildContext context) {
+                              return const Scaffold(
+                                body: LoginScreen(),
                               );
                             },
                           ));
