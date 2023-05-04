@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lmsapp/pages/dashboard.dart';
+import 'package:lmsapp/pages/lessons/clesson.dart';
 import 'package:lmsapp/pages/loading.dart';
 import 'package:lmsapp/pages/login.dart';
 import 'package:lmsapp/pages/signup.dart';
@@ -21,7 +22,7 @@ class LMSApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-        debugShowCheckedModeBanner: false, home: LoadingScreen());
+        debugShowCheckedModeBanner: false, home: ClessonPage());
   }
 }
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lmsapp/pages/lessons/clesson.dart';
 
 class MyCourses extends StatefulWidget {
   @override
@@ -6,6 +7,7 @@ class MyCourses extends StatefulWidget {
 }
 
 class _MyCoursesState extends State<MyCourses> {
+  Widget clesson = ClessonPage();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,21 +92,21 @@ class _MyCoursesState extends State<MyCourses> {
                 crossAxisCount: 2,
                 children: [
                   buildContainer('HTML 5', Color(0xFFF99B7D), Color(0xFFE76161),
-                      0.58, '14/24'),
+                      0.58, '14/24', clesson),
                   buildContainer('Java', Color(0xFFACB1D6), Color(0xFF8294C4),
-                      0.67, '12/18'),
+                      0.67, '12/18', clesson),
                   buildContainer(
-                      'CSS', Color(0xFF3F72AF), Color(0xFF112D4E), 1, '15/15'),
+                      'CSS', Color(0xFF3F72AF), Color(0xFF112D4E), 1, '15/15', clesson),
                   buildContainer('C++', Color(0xFF05BFDB), Color(0xFF088395),
-                      0.9, '18/20'),
+                      0.9, '18/20', clesson),
                   buildContainer('PHP', Color(0xFF41644A), Color(0xFF263A29),
-                      0.55, '10/18'),
+                      0.55, '10/18', clesson),
                   buildContainer('Python', Color(0xFFC9A7EB), Color(0xFF9384D1),
-                      0.6, '18/30'),
+                      0.6, '18/30', clesson),
                   buildContainer('Bootstrap', Color(0xFFC9DBB2),
-                      Color(0xFFAAC8A7), 0.8, '20/24'),
+                      Color(0xFFAAC8A7), 0.8, '20/24', clesson),
                   buildContainer(
-                      'C', Color(0xFFA2A378), Color(0xFF83764F), 0.17, '2/12'),
+                      'C', Color(0xFFA2A378), Color(0xFF83764F), 0.17, '2/12', clesson),
                 ],
               ),
             ],
@@ -115,7 +117,7 @@ class _MyCoursesState extends State<MyCourses> {
   }
 
   Widget buildContainer(String text, Color containerColor, Color progressColor,
-      double progressValue, String completionText) {
+      double progressValue, String completionText, Widget dynamicWidget) {
     return Padding(
       padding: EdgeInsets.all(8.0),
       child: Container(
@@ -182,10 +184,20 @@ class _MyCoursesState extends State<MyCourses> {
                   bottom: 16.0,
                   right: 16.0,
                   child: FloatingActionButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (BuildContext context) {
+                            return const Scaffold(
+                              body: ClessonPage(),
+                            );  // Navigate to ClessonPage
+                          },
+                        ),
+                      );
+                    },
                     mini: true,
-                    backgroundColor:
-                        progressColor, // Use progressColor as the background color
+                    backgroundColor: progressColor, // Use progressColor as the background color
                     child: Icon(Icons.play_arrow),
                   ),
                 ),
