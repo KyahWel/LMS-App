@@ -3,7 +3,6 @@ import 'package:lmsapp/pages/loading.dart';
 import 'package:lmsapp/pages/login.dart';
 import 'package:lmsapp/pages/signup.dart';
 
-
 void main() {
   runApp(const LMSApp());
 }

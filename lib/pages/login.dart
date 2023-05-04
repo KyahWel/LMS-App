@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lmsapp/pages/signup.dart';
 import 'package:lmsapp/pages/dashboard.dart';
+import 'package:lmsapp/pages/profile.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -76,7 +77,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => DashboardPage()),
+                          MaterialPageRoute(builder: (context) => ProfilePage()),
                         );
                       },
                       style: buttonStyle,
