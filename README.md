@@ -27,8 +27,8 @@ $ flutter run
 # Application Screenshots
 
 ## Loading Page
-![342722978_3532951683617473_2482730729041029694_n](https://user-images.githubusercontent.com/73891177/236407352-58d2a1e3-1468-4231-9c3a-b32f6735a99f.jpg | width=100)
-![342522860_753360279677397_5476799596466829611_n](https://user-images.githubusercontent.com/73891177/236407363-0d09ac9f-0147-4491-8f67-c8fef298ca35.jpg | width=100)
+ <img src="[https://your-image-url.type](https://user-images.githubusercontent.com/73891177/236407352-58d2a1e3-1468-4231-9c3a-b32f6735a99f.jpg)" width="250" height="600">
+![342522860_753360279677397_5476799596466829611_n](https://user-images.githubusercontent.com/73891177/236407363-0d09ac9f-0147-4491-8f67-c8fef298ca35.jpg)
 ![342528405_239781965393508_4013566301670557297_n](https://user-images.githubusercontent.com/73891177/236407373-03b173b5-de37-4079-9f62-38ddef659dca.jpg | width=100)
 ![342713783_1036484213984141_6896991104661863488_n](https://user-images.githubusercontent.com/73891177/236407380-05f1f841-259a-4503-a10a-3bc7e94d7abd.jpg | width=100)
 
