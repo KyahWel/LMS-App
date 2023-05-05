@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lmsapp/pages/html.dart';
-import 'package:lmsapp/pages/java.dart';
 import 'package:lmsapp/pages/lessons/clesson.dart';
+import 'package:lmsapp/pages/lessons/htmlesson.dart';
 
 class MyCourses extends StatefulWidget {
   @override
@@ -9,14 +8,15 @@ class MyCourses extends StatefulWidget {
 }
 
 class _MyCoursesState extends State<MyCourses> {
-  Widget clesson = ClessonPage();
+  static List<Widget> pageRoutes = <Widget>[ClessonPage(), HtmlPage()];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Text(
+            const Text(
               'My Courses',
               style: TextStyle(
                 fontSize: 20,
@@ -42,7 +42,7 @@ class _MyCoursesState extends State<MyCourses> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     'Learned today',
                     style: TextStyle(
                       fontSize: 16,
@@ -50,8 +50,8 @@ class _MyCoursesState extends State<MyCourses> {
                       color: Colors.grey, // Set the text color to gray
                     ),
                   ),
-                  SizedBox(height: 4.0),
-                  Text.rich(
+                  const SizedBox(height: 4.0),
+                  const Text.rich(
                     TextSpan(
                       text: '46 mins',
                       style: TextStyle(
@@ -74,7 +74,7 @@ class _MyCoursesState extends State<MyCourses> {
                   SizedBox(height: 10),
                   ClipRRect(
                     borderRadius: BorderRadius.circular(10),
-                    child: LinearProgressIndicator(
+                    child: const LinearProgressIndicator(
                       value: 0.77,
                       minHeight: 10,
                       backgroundColor: Colors.grey,
@@ -86,39 +86,25 @@ class _MyCoursesState extends State<MyCourses> {
             ),
             GridView.count(
               shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               crossAxisCount: 2,
               children: [
                 buildContainer(
-                  'HTML 5',
-                  Color(0xFFF99B7D),
-                  Color(0xFFE76161),
-                  0.58,
-                  '14/24',
-                  () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => HtmlPage(),
-                      ),
-                    );
-                  },
-                ),
+                    'C',
+                    const Color(0xFFF99B7D),
+                    const Color(0xFFE76161),
+                    0.58,
+                    '14/24',
+                    ClessonPage(),
+                    'Cpage'),
                 buildContainer(
-                  'Java',
-                  Color(0xFFACB1D6),
-                  Color(0xFF8294C4),
-                  0.67,
-                  '12/18',
-                  () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => JavaPage(),
-                      ),
-                    );
-                  },
-                ),
+                    'HTML 5',
+                    const Color(0xFFACB1D6),
+                    const Color(0xFF8294C4),
+                    0.67,
+                    '12/18',
+                    HtmlPage(),
+                    'Htmlpage'),
               ],
             ),
           ],
@@ -133,7 +119,8 @@ class _MyCoursesState extends State<MyCourses> {
     Color progressColor,
     double progressValue,
     String completionText,
-    VoidCallback onPressed,
+    Widget page,
+    String tag,
   ) {
     return Padding(
       padding: EdgeInsets.all(8.0),
@@ -162,7 +149,7 @@ class _MyCoursesState extends State<MyCourses> {
                             fontSize: 22, fontWeight: FontWeight.bold),
                       ),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 16.0),
                       child: ClipRRect(
@@ -184,14 +171,14 @@ class _MyCoursesState extends State<MyCourses> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                         'Completed',
                         style: TextStyle(
                             fontSize: 14, fontWeight: FontWeight.normal),
                       ),
                       Text(
                         completionText,
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontSize: 22, fontWeight: FontWeight.bold),
                       ),
                     ],
@@ -201,11 +188,18 @@ class _MyCoursesState extends State<MyCourses> {
                   bottom: 16.0,
                   right: 16.0,
                   child: FloatingActionButton(
-                    onPressed: onPressed,
+                    heroTag: tag,
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute<void>(
+                        builder: (BuildContext context) {
+                          return page;
+                        },
+                      ));
+                    },
                     mini: true,
                     backgroundColor:
                         progressColor, // Use progressColor as the background color
-                    child: Icon(Icons.play_arrow),
+                    child: const Icon(Icons.play_arrow),
                   ),
                 ),
               ],
