@@ -78,7 +78,7 @@ class phpLessonPage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0),
                     child: Image.network(
-                      'https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png',
+                      'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/640px-PHP-logo.svg.png',
                       width: 80,
                       height: 80,
                     ),
@@ -120,11 +120,11 @@ class phpLessonPage extends StatelessWidget {
                       children: [
                         TextSpan(
                           text:
-                          'HTML is at the core of every web page. It’s beginner-friendly and knowing the basics is useful for everyone who works in digital design, marketing, content and more.',
+                          'PHP stands for Hypertext Preprocessor. It is an open-source server-side scripting language used for dynamic web development and can be embedded into HTML codes.',
                         ),
                         TextSpan(
                           text:
-                          '\n\nIf you’re interested in front-end web development, this course is a great place to start! You don’t need any previous coding experience, and we have plenty of other courses for you to deepen your knowledge once you’re finished, including CSS and JavaScript.',
+                          '\n\nPHP is a server side scripting language that is embedded in HTML. It is used to manage dynamic content, databases, session tracking, even build entire e-commerce sites. It is integrated with a number of popular databases, including MySQL, PostgreSQL, Oracle, Sybase, Informix, and Microsoft SQL Server.',
                         ),
                       ],
                     ),
@@ -246,7 +246,7 @@ class phpLessonPage2 extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0),
                     child: Image.network(
-                      'https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png',
+                      'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/640px-PHP-logo.svg.png',
                       width: 80,
                       height: 80,
                     ),
@@ -456,7 +456,7 @@ class phpLessonPage3 extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0),
                     child: Image.network(
-                      'https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png',
+                      'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/640px-PHP-logo.svg.png',
                       width: 80,
                       height: 80,
                     ),
@@ -648,7 +648,7 @@ class phpLessonPage4 extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0),
                     child: Image.network(
-                      'https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png',
+                      'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/640px-PHP-logo.svg.png',
                       width: 80,
                       height: 80,
                     ),
@@ -926,7 +926,7 @@ class phpLessonPage5 extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0),
                     child: Image.network(
-                      'https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png',
+                      'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/640px-PHP-logo.svg.png',
                       width: 80,
                       height: 80,
                     ),

@@ -78,7 +78,7 @@ class bootstrapLessonPage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0),
                     child: Image.network(
-                      'https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png',
+                      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png',
                       width: 80,
                       height: 80,
                     ),
@@ -91,7 +91,7 @@ class bootstrapLessonPage extends StatelessWidget {
                         child: Text(
                           'Introducing Bootstrap',
                           style: TextStyle(
-                            fontSize: 28.0,
+                            fontSize: 26.0,
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
                           ),
@@ -120,11 +120,11 @@ class bootstrapLessonPage extends StatelessWidget {
                       children: [
                         TextSpan(
                           text:
-                          'HTML is at the core of every web page. It’s beginner-friendly and knowing the basics is useful for everyone who works in digital design, marketing, content and more.',
+                          'Bootstrap is the most popular HTML, CSS and JavaScript framework for developing a responsive and mobile friendly website. It is absolutely free to download and use. It is a front-end framework used for easier and faster web development.',
                         ),
                         TextSpan(
                           text:
-                          '\n\nIf you’re interested in front-end web development, this course is a great place to start! You don’t need any previous coding experience, and we have plenty of other courses for you to deepen your knowledge once you’re finished, including CSS and JavaScript.',
+                          '\n\nBootstrap, originally named Twitter Blueprint, was developed by Mark Otto and Jacob Thornton at Twitter as a framework to encourage consistency across internal tools. Before Bootstrap, various libraries were used for interface development, which led to inconsistencies and a high maintenance burden.',
                         ),
                       ],
                     ),
@@ -246,7 +246,7 @@ class bootstrapLessonPage2 extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0),
                     child: Image.network(
-                      'https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png',
+                      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png',
                       width: 80,
                       height: 80,
                     ),
@@ -456,7 +456,7 @@ class bootstrapLessonPage3 extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0),
                     child: Image.network(
-                      'https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png',
+                      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png',
                       width: 80,
                       height: 80,
                     ),
@@ -648,7 +648,7 @@ class bootstrapLessonPage4 extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0),
                     child: Image.network(
-                      'https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png',
+                      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png',
                       width: 80,
                       height: 80,
                     ),
@@ -926,7 +926,7 @@ class bootstrapLessonPage5 extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0),
                     child: Image.network(
-                      'https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png',
+                      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png',
                       width: 80,
                       height: 80,
                     ),
