@@ -67,20 +67,22 @@ class _SignUpState extends State<SignUp> {
     return menuItems;
   }
 
-  String selectedValueGender = "Male";
-  final fullnameController = TextEditingController();
-  final ageController = TextEditingController();
-  final addressController = TextEditingController();
-  final contactController = TextEditingController();
-  final emailController = TextEditingController();
-  final passwordController = TextEditingController();
-  final usernameController = TextEditingController();
+  String selectedValueGender = "";
+  final TextEditingController fullnameController = TextEditingController();
+  final TextEditingController ageController = TextEditingController();
+  final TextEditingController addressController = TextEditingController();
+  final TextEditingController contactController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController confirmpasswordController =
+      TextEditingController();
+  final TextEditingController usernameController = TextEditingController();
 
   Future<void> signUpAuth() async {
     try {
       await _auth.createUserWithEmailAndPassword(
-        email: emailController.text.trim(),
-        password: passwordController.text.trim(),
+        email: emailController.text,
+        password: passwordController.text,
       );
       print('User registered successfully!');
     } on FirebaseAuthException catch (e) {
@@ -116,6 +118,8 @@ class _SignUpState extends State<SignUp> {
       print('Error adding user to Firestore: $e');
     }
   }
+
+  CollectionReference users = FirebaseFirestore.instance.collection('users');
 
   @override
   Widget build(BuildContext context) {
@@ -232,6 +236,9 @@ class _SignUpState extends State<SignUp> {
                       height: 60,
                       child: TextField(
                         controller: emailController,
+                        onChanged: (value) {
+                          usernameController.text = value;
+                        },
                         decoration: const InputDecoration(
                           contentPadding: EdgeInsets.all(8),
                           labelText: 'Email Address',
@@ -249,6 +256,7 @@ class _SignUpState extends State<SignUp> {
                 ),
                 const SizedBox(height: 15),
                 TextField(
+                  readOnly: true,
                   controller: usernameController,
                   decoration: const InputDecoration(
                     contentPadding: EdgeInsets.all(8),
@@ -271,6 +279,7 @@ class _SignUpState extends State<SignUp> {
                 ),
                 const SizedBox(height: 15),
                 TextField(
+                  controller: confirmpasswordController,
                   obscureText: true,
                   enableSuggestions: false,
                   autocorrect: false,
@@ -286,17 +295,57 @@ class _SignUpState extends State<SignUp> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     ElevatedButton(
-                        onPressed: () {
-                          // signUpAuth();
-                          // print('Email $emailController.text');
-                          // print('Password $passwordController.text');
-                          Navigator.push(context, MaterialPageRoute<void>(
-                            builder: (BuildContext context) {
-                              return const Scaffold(
-                                body: LoginScreen(),
+                        onPressed: () async {
+                          if (passwordController.text ==
+                              confirmpasswordController.text) {
+                            try {
+                              await FirebaseAuth.instance
+                                  .createUserWithEmailAndPassword(
+                                email: emailController.text,
+                                password: passwordController.text,
                               );
-                            },
-                          ));
+                              Navigator.push(context, MaterialPageRoute<void>(
+                                builder: (BuildContext context) {
+                                  return const Scaffold(
+                                    body: LoginScreen(),
+                                  );
+                                },
+                              ));
+                              try {
+                                await FirebaseAuth.instance.signOut();
+                              } catch (e) {
+                                print(e);
+                              }
+                              try {
+                                await users.add({
+                                  'name': fullnameController.text,
+                                  'email': emailController.text,
+                                  'age': ageController.text,
+                                  'gender': selectedValueGender,
+                                  'address': addressController.text,
+                                  'contact': contactController.text,
+                                  'username': usernameController.text,
+                                  'password': passwordController.text
+                                });
+
+                                print('User added to Firestore!');
+                              } catch (e) {
+                                print('Error adding user to Firestore: $e');
+                              }
+                              print('User registered successfully!');
+                            } on FirebaseAuthException catch (e) {
+                              if (e.code == 'weak-password') {
+                                print('The password provided is too weak.');
+                              } else if (e.code == 'email-already-in-use') {
+                                print(
+                                    'The account already exists for that email.');
+                              }
+                            } catch (e) {
+                              print('Error registering user: $e');
+                            }
+                          } else {
+                            print('Wrong Passwords');
+                          }
                         },
                         style: buttonStyle,
                         child: const Padding(

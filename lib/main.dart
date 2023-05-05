@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lmsapp/pages/dashboard.dart';
-import 'package:lmsapp/pages/lessons/clesson.dart';
 import 'package:lmsapp/pages/loading.dart';
-import 'package:lmsapp/pages/login.dart';
-import 'package:lmsapp/pages/signup.dart';
 import 'package:lmsapp/pages/widgets/introPageA.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -31,6 +27,17 @@ class MainLanding extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: LandingPageA());
+    return Scaffold(
+        body: StreamBuilder<User?>(
+            stream: FirebaseAuth.instance.authStateChanges(),
+            builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                print(snapshot);
+                return const mainPage();
+              } else {
+                print('User Logged Out');
+                return const LandingPageA();
+              }
+            }));
   }
 }

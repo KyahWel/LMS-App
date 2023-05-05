@@ -17,7 +17,7 @@ class _MyCoursesState extends State<MyCourses> {
           child: Column(
             children: [
               SizedBox(height: 40.0),
-              Text(
+              const Text(
                 'My Courses',
                 style: TextStyle(
                   fontSize: 35,
@@ -26,8 +26,8 @@ class _MyCoursesState extends State<MyCourses> {
               ),
               SizedBox(height: 8.0),
               Container(
-                margin: EdgeInsets.all(8.0),
-                padding: EdgeInsets.all(16.0),
+                margin: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(16.0),
                 decoration: BoxDecoration(
                   color: Colors.white, // Set the background color to white
                   borderRadius: BorderRadius.circular(10),
@@ -44,7 +44,7 @@ class _MyCoursesState extends State<MyCourses> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       'Learned today',
                       style: TextStyle(
                         fontSize: 16,
@@ -52,8 +52,8 @@ class _MyCoursesState extends State<MyCourses> {
                         color: Colors.grey, // Set the text color to gray
                       ),
                     ),
-                    SizedBox(height: 4.0),
-                    Text.rich(
+                    const SizedBox(height: 4.0),
+                    const Text.rich(
                       TextSpan(
                         text: '46 mins',
                         style: TextStyle(
