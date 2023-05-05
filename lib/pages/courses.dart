@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:lmsapp/pages/lessons/clesson.dart';
 import 'package:lmsapp/pages/lessons/htmlesson.dart';
+import 'package:lmsapp/pages/lessons/csslesson.dart';
+import 'package:lmsapp/pages/lessons/javalesson.dart';
+import 'package:lmsapp/pages/lessons/phplesson.dart';
+import 'package:lmsapp/pages/lessons/bootstrap.dart';
 
 class MyCourses extends StatefulWidget {
   @override
@@ -8,7 +12,6 @@ class MyCourses extends StatefulWidget {
 }
 
 class _MyCoursesState extends State<MyCourses> {
-  static List<Widget> pageRoutes = <Widget>[ClessonPage(), HtmlPage()];
 
   @override
   Widget build(BuildContext context) {
@@ -91,20 +94,52 @@ class _MyCoursesState extends State<MyCourses> {
               children: [
                 buildContainer(
                     'C',
-                    const Color(0xFFF99B7D),
-                    const Color(0xFFE76161),
+                    const Color(0xFFA2A378),
+                    const Color(0xFF83764F),
                     0.58,
                     '14/24',
                     ClessonPage(),
                     'Cpage'),
                 buildContainer(
                     'HTML 5',
+                    const Color(0xFFF99B7D),
+                    const Color(0xFFE76161),
+                    0.67,
+                    '12/18',
+                    htmlLessonPage(), //class name ng page
+                    'htmlessonPage'),
+                buildContainer(
+                    'Java',
                     const Color(0xFFACB1D6),
                     const Color(0xFF8294C4),
                     0.67,
                     '12/18',
-                    HtmlPage(),
-                    'Htmlpage'),
+                    javaLessonPage(),
+                    'javaLessonPage'),
+                buildContainer(
+                    'CSS',
+                    const Color(0xFF3F72AF),
+                    const Color(0xFF112D4E),
+                    .9,
+                    '17/18',
+                    cssLessonPage(),
+                    'htmlessonPage'),
+                buildContainer(
+                    'PHP',
+                    const Color(0xFF41644A),
+                    const Color(0xFF263A29),
+                    .5,
+                    '9/18',
+                    phpLessonPage(),
+                    'phpLessonPage'),
+                buildContainer(
+                    'Bootstrap',
+                    const Color(0xFFC9DBB2),
+                    const Color(0xFFAAC8A7),
+                    .8,
+                    '16/18',
+                    bootstrapLessonPage(),
+                    'bootstrapLessonPage'),
               ],
             ),
           ],
