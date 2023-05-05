@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lmsapp/pages/widgets/mainPage.dart';
 
 class ClessonPage extends StatelessWidget {
   const ClessonPage({Key? key}) : super(key: key);
@@ -969,7 +970,7 @@ class ClessonPage5 extends StatelessWidget {
                     Navigator.push(context, MaterialPageRoute<void>(
                             builder: (BuildContext context) {
                               return const Scaffold(
-                                body: ClessonPage5(),
+                                body: mainPage(),
                               );
                             },
                           ));

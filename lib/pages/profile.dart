@@ -35,27 +35,32 @@ class _ProfilePageState extends State<ProfilePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const SizedBox(height: 16),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text('Logout'),
-                  IconButton(
-                    icon: const Icon(Icons.logout),
-                    onPressed: () async {
-                      await FirebaseAuth.instance.signOut();
-                      Navigator.push(context, MaterialPageRoute<void>(
-                        builder: (BuildContext context) {
-                          return const Scaffold(
-                            body: LoginScreen(),
-                          );
-                        },
-                      ));
-                    },
-                  )
-                ],
-              ),
-              const SizedBox(height: 16),
+            const SizedBox(height: 25),
+             Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text(
+                  'Logout',
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.logout),
+                      onPressed: () async {
+                        await FirebaseAuth.instance.signOut();
+                        Navigator.push(context, MaterialPageRoute<void>(
+                          builder: (BuildContext context) {
+                            return const Scaffold(
+                              body: LoginScreen(),
+                            );
+                          },
+                        ));
+                      },
+                    ),
+                  ],
+                ),
+                  const SizedBox(height: 16),
               InkWell(
                 onTap: () {
                   showModalBottomSheet(
@@ -86,8 +91,8 @@ class _ProfilePageState extends State<ProfilePage> {
                   alignment: Alignment.center,
                   children: [
                     CircleAvatar(
-                      radius: 75,
-                      backgroundColor: Colors.grey[300],
+                      radius: 100,
+                      backgroundColor: Color(0xFF003E6D),
                       backgroundImage: _image != null
                           ? FileImage(_image!)
                           : const NetworkImage(
@@ -107,7 +112,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 20,
+                  fontSize: 30,
                 ),
               ),
               const SizedBox(height: 8),
@@ -116,34 +121,40 @@ class _ProfilePageState extends State<ProfilePage> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.grey,
+                  fontSize: 25,
                 ),
               ),
               const SizedBox(height: 8),
               TextButton(
                 onPressed: () {
-                  // Add your code here
+                // Add your code here
                 },
                 child: const Text(
-                  'Change your password',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.grey,
-                  ),
+                'Change your password',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                color: Colors.grey,
+                fontWeight: FontWeight.bold,
                 ),
-              ),
+                ),
+                ),
               ListTile(
+                leading: Icon(Icons.calendar_month),
                 title: Text('Age: 21'),
               ),
               const SizedBox(height: 16),
               ListTile(
+                leading: Icon(Icons.person),
                 title: Text('Gender: Male'),
               ),
               const SizedBox(height: 16),
               ListTile(
+                leading: Icon(Icons.location_on),
                 title: Text('Address: Quezon City'),
               ),
               const SizedBox(height: 16),
               ListTile(
+                leading: Icon(Icons.phone),
                 title: Text('Phone: 09270287483'),
               ),
             ],
