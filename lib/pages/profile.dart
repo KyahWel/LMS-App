@@ -26,6 +26,21 @@ class _ProfilePageState extends State<ProfilePage> {
     }
   }
 
+  Future signOut() async {
+    try {
+      await FirebaseAuth.instance.signOut();
+      Navigator.push(context, MaterialPageRoute<void>(
+        builder: (BuildContext context) {
+          return const Scaffold(
+            body: LoginScreen(),
+          );
+        },
+      ));
+    } on FirebaseAuthException catch (e) {
+      print(e);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,32 +50,20 @@ class _ProfilePageState extends State<ProfilePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-            const SizedBox(height: 25),
-             Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Text(
-                  'Logout',
-                      style: TextStyle(
-                        fontSize: 20,
-                      ),
-                    ),
-                    IconButton(
-                      icon: const Icon(Icons.logout),
-                      onPressed: () async {
-                        await FirebaseAuth.instance.signOut();
-                        Navigator.push(context, MaterialPageRoute<void>(
-                          builder: (BuildContext context) {
-                            return const Scaffold(
-                              body: LoginScreen(),
-                            );
-                          },
-                        ));
-                      },
-                    ),
-                  ],
-                ),
-                  const SizedBox(height: 16),
+              const SizedBox(height: 16),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text('Logout'),
+                  IconButton(
+                    icon: const Icon(Icons.logout),
+                    onPressed: () {
+                      signOut();
+                    },
+                  )
+                ],
+              ),
+              const SizedBox(height: 16),
               InkWell(
                 onTap: () {
                   showModalBottomSheet(
@@ -121,23 +124,23 @@ class _ProfilePageState extends State<ProfilePage> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.grey,
-                  fontSize: 25,
+                  fontSize: 20,
                 ),
               ),
               const SizedBox(height: 8),
               TextButton(
                 onPressed: () {
-                // Add your code here
+                  // Add your code here
                 },
                 child: const Text(
-                'Change your password',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                color: Colors.grey,
-                fontWeight: FontWeight.bold,
+                  'Change your password',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-                ),
-                ),
+              ),
               ListTile(
                 leading: Icon(Icons.calendar_month),
                 title: Text('Age: 21'),

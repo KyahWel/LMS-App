@@ -26,10 +26,23 @@ class _LoginScreenState extends State<LoginScreen> {
       await FirebaseAuth.instance.signInWithEmailAndPassword(
           email: emailController.text.trim(),
           password: passwordController.text.trim());
+      Navigator.push(context, MaterialPageRoute<void>(
+        builder: (BuildContext context) {
+          return const Scaffold(
+            body: mainPage(),
+          );
+        },
+      ));
     } on FirebaseAuthException catch (e) {
-      hasError = true;
+      print(e);
+      Navigator.push(context, MaterialPageRoute<void>(
+        builder: (BuildContext context) {
+          return const Scaffold(
+            body: LoginScreen(),
+          );
+        },
+      ));
     }
-    hasError = false;
   }
 
   @override
@@ -41,122 +54,118 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Center(
-        child: SingleChildScrollView(
-          child: Padding(
-              padding: const EdgeInsets.all(10),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  const CircleAvatar(
-                    backgroundImage: NetworkImage(
-                        "https://i.ibb.co/6X54Y75/360-F-102517057-4-Tedp0g-Kw-Ck-Wwu54k-Kni0-GZ0-Dq-IWe5-MY.jpg"),
-                    radius: 90.0,
-                  ),
-                  RichText(
-                    text: const TextSpan(
-                        text: 'Name of ',
-                        style: TextStyle(
-                            color: Color.fromARGB(255, 77, 77, 77),
-                            fontSize: 27,
-                            fontWeight: FontWeight.bold),
-                        children: <TextSpan>[
-                          TextSpan(
-                            text: 'Application',
-                            style: TextStyle(
-                                color: Color.fromARGB(255, 0, 62, 109),
-                                fontSize: 27),
-                          )
-                        ]),
-                  ),
-                  const SizedBox(height: 50),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 25, vertical: 16),
-                    child: TextField(
-                      controller: emailController,
-                      decoration: const InputDecoration(
-                        labelText: 'Username',
-                        border: OutlineInputBorder(),
-                        hintText: 'Enter Username',
+    return WillPopScope(
+      onWillPop: () async {
+        return false;
+      },
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        body: Center(
+          child: SingleChildScrollView(
+            child: Padding(
+                padding: const EdgeInsets.all(10),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    const CircleAvatar(
+                      backgroundImage: NetworkImage(
+                          "https://i.ibb.co/6X54Y75/360-F-102517057-4-Tedp0g-Kw-Ck-Wwu54k-Kni0-GZ0-Dq-IWe5-MY.jpg"),
+                      radius: 90.0,
+                    ),
+                    RichText(
+                      text: const TextSpan(
+                          text: 'Name of ',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 77, 77, 77),
+                              fontSize: 27,
+                              fontWeight: FontWeight.bold),
+                          children: <TextSpan>[
+                            TextSpan(
+                              text: 'Application',
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 0, 62, 109),
+                                  fontSize: 27),
+                            )
+                          ]),
+                    ),
+                    const SizedBox(height: 50),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 25, vertical: 16),
+                      child: TextField(
+                        controller: emailController,
+                        decoration: const InputDecoration(
+                          labelText: 'Username',
+                          border: OutlineInputBorder(),
+                          hintText: 'Enter Username',
+                        ),
                       ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 25),
-                    child: TextField(
-                      controller: passwordController,
-                      obscureText: true,
-                      enableSuggestions: false,
-                      autocorrect: false,
-                      decoration: const InputDecoration(
-                        labelText: 'Password',
-                        border: OutlineInputBorder(),
-                        hintText: 'Enter Password',
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 25),
+                      child: TextField(
+                        controller: passwordController,
+                        obscureText: true,
+                        enableSuggestions: false,
+                        autocorrect: false,
+                        decoration: const InputDecoration(
+                          labelText: 'Password',
+                          border: OutlineInputBorder(),
+                          hintText: 'Enter Password',
+                        ),
                       ),
                     ),
-                  ),
-                  const SizedBox(height: 50),
-                  ElevatedButton(
-                      onPressed: () {
-                        print(emailController.text);
-                        print(passwordController.text);
-                        signIn();
-                        if (!hasError) {
-                          Navigator.push(context, MaterialPageRoute<void>(
-                            builder: (BuildContext context) {
-                              return const Scaffold(
-                                body: mainPage(),
-                              );
+                    const SizedBox(height: 50),
+                    ElevatedButton(
+                        onPressed: () {
+                          signIn();
+                          print(emailController.text);
+                          print(passwordController.text);
+                          // try{
+                          //     FirebaseAuth.instance.signInWithEmailAndPassword(
+                          //     email: emailController.text,
+                          //     password: passwordController.text);
+                          // }
+                          // catch(e){
+                          //   print('Errpr ')
+                          // }
+                        },
+                        style: buttonStyle,
+                        child: const Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text("Login"),
+                        )),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        TextButton(
+                            onPressed: () {
+                              Navigator.push(context, MaterialPageRoute<void>(
+                                builder: (BuildContext context) {
+                                  return const Scaffold(
+                                    body: SignUp(),
+                                  );
+                                },
+                              ));
                             },
-                          ));
-                        } else {
-                          Navigator.push(context, MaterialPageRoute<void>(
-                            builder: (BuildContext context) {
-                              return const Scaffold(
-                                body: LoginScreen(),
-                              );
+                            child: const Text("Create an Account")),
+                        TextButton(
+                            onPressed: () {
+                              Navigator.push(context, MaterialPageRoute<void>(
+                                builder: (BuildContext context) {
+                                  return const Scaffold(
+                                    body: ForgetScreen(),
+                                  );
+                                },
+                              ));
                             },
-                          ));
-                        }
-                      },
-                      style: buttonStyle,
-                      child: const Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Text("Login"),
-                      )),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      TextButton(
-                          onPressed: () {
-                            Navigator.push(context, MaterialPageRoute<void>(
-                              builder: (BuildContext context) {
-                                return const Scaffold(
-                                  body: SignUp(),
-                                );
-                              },
-                            ));
-                          },
-                          child: const Text("Create an Account")),
-                      TextButton(
-                          onPressed: () {
-                            Navigator.push(context, MaterialPageRoute<void>(
-                              builder: (BuildContext context) {
-                                return const Scaffold(
-                                  body: ForgetScreen(),
-                                );
-                              },
-                            ));
-                          },
-                          child: const Text("Forgot Password"))
-                    ],
-                  )
-                ],
-              )),
+                            child: const Text("Forgot Password"))
+                      ],
+                    )
+                  ],
+                )),
+          ),
         ),
       ),
     );
