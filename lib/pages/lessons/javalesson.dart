@@ -78,7 +78,7 @@ class javaLessonPage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0),
                     child: Image.network(
-                      'https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png',
+                      'https://assets.stickpng.com/thumbs/58480979cef1014c0b5e4901.png',
                       width: 80,
                       height: 80,
                     ),
@@ -120,11 +120,11 @@ class javaLessonPage extends StatelessWidget {
                       children: [
                         TextSpan(
                           text:
-                          'HTML is at the core of every web page. It’s beginner-friendly and knowing the basics is useful for everyone who works in digital design, marketing, content and more.',
+                          'Java technology is a language of programming as well as a platform. Java is a high level, robust, secured and object-oriented programming language. And any hardware or software environment in which a program runs is known as a platform. Since Java has its own runtime environment (JRE) and API, it is called a platform.',
                         ),
                         TextSpan(
                           text:
-                          '\n\nIf you’re interested in front-end web development, this course is a great place to start! You don’t need any previous coding experience, and we have plenty of other courses for you to deepen your knowledge once you’re finished, including CSS and JavaScript.',
+                          '\n\nJava is a popular programming language, created in 1995. It is owned by Oracle, and more than 3 billion devices run Java.',
                         ),
                       ],
                     ),
@@ -246,7 +246,7 @@ class javaLessonPage2 extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0),
                     child: Image.network(
-                      'https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png',
+                      'https://assets.stickpng.com/thumbs/58480979cef1014c0b5e4901.png',
                       width: 80,
                       height: 80,
                     ),
@@ -456,7 +456,7 @@ class javaLessonPage3 extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0),
                     child: Image.network(
-                      'https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png',
+                      'https://assets.stickpng.com/thumbs/58480979cef1014c0b5e4901.png',
                       width: 80,
                       height: 80,
                     ),
@@ -648,7 +648,7 @@ class javaLessonPage4 extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0),
                     child: Image.network(
-                      'https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png',
+                      'https://assets.stickpng.com/thumbs/58480979cef1014c0b5e4901.png',
                       width: 80,
                       height: 80,
                     ),
@@ -926,7 +926,7 @@ class javaLessonPage5 extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0),
                     child: Image.network(
-                      'https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png',
+                      'https://assets.stickpng.com/thumbs/58480979cef1014c0b5e4901.png',
                       width: 80,
                       height: 80,
                     ),

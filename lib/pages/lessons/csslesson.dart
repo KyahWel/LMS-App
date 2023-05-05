@@ -78,7 +78,7 @@ class cssLessonPage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0),
                     child: Image.network(
-                      'https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png',
+                      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png',
                       width: 80,
                       height: 80,
                     ),
@@ -120,11 +120,11 @@ class cssLessonPage extends StatelessWidget {
                       children: [
                         TextSpan(
                           text:
-                          'HTML is at the core of every web page. It’s beginner-friendly and knowing the basics is useful for everyone who works in digital design, marketing, content and more.',
+                          'Ever seen a website and thought “Wow, that’s beautiful”? Chances are that a CSS whiz had a hand in creating it! If you’re interested in visual design, CSS is the perfect language for you.',
                         ),
                         TextSpan(
                           text:
-                          '\n\nIf you’re interested in front-end web development, this course is a great place to start! You don’t need any previous coding experience, and we have plenty of other courses for you to deepen your knowledge once you’re finished, including CSS and JavaScript.',
+                          '\n\nCSS is also great for those interested in front-end web development. It’s an essential tool for styling web content, and is used to define the visual appearance of design and layout variations for different screen and device sizes. CSS is a perfect partner for those learning HTML and JavaScript. It’s simple to learn, so you’ll be crafting your own beautiful digital experiences in no time!',
                         ),
                       ],
                     ),
@@ -246,7 +246,7 @@ class cssLessonPage2 extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0),
                     child: Image.network(
-                      'https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png',
+                      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png',
                       width: 80,
                       height: 80,
                     ),
@@ -456,7 +456,7 @@ class cssLessonPage3 extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0),
                     child: Image.network(
-                      'https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png',
+                      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png',
                       width: 80,
                       height: 80,
                     ),
@@ -648,7 +648,7 @@ class cssLessonPage4 extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0),
                     child: Image.network(
-                      'https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png',
+                      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png',
                       width: 80,
                       height: 80,
                     ),
@@ -926,7 +926,7 @@ class cssLessonPage5 extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0),
                     child: Image.network(
-                      'https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png',
+                      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png',
                       width: 80,
                       height: 80,
                     ),
