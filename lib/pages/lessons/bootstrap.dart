@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lmsapp/pages/widgets/mainPage.dart';
 
-class ClessonPage extends StatelessWidget {
-  const ClessonPage({Key? key}) : super(key: key);
+class bootstrapLessonPage extends StatelessWidget {
+  const bootstrapLessonPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +78,7 @@ class ClessonPage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0),
                     child: Image.network(
-                      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/1200px-C_Programming_Language.svg.png',
+                      'https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png',
                       width: 80,
                       height: 80,
                     ),
@@ -89,7 +89,7 @@ class ClessonPage extends StatelessWidget {
                       child: Align(
                         alignment: Alignment.center,
                         child: Text(
-                          'Introducing C',
+                          'Introducing Bootstrap',
                           style: TextStyle(
                             fontSize: 28.0,
                             fontWeight: FontWeight.bold,
@@ -120,15 +120,11 @@ class ClessonPage extends StatelessWidget {
                       children: [
                         TextSpan(
                           text:
-                          'C is a general-purpose programming language that has been around for nearly 50 years.',
+                          'HTML is at the core of every web page. It’s beginner-friendly and knowing the basics is useful for everyone who works in digital design, marketing, content and more.',
                         ),
                         TextSpan(
                           text:
-                          '\n\nC has been used to write everything from operating systems (including Windows and many others) to complex programs like the Python interpreter, Git, Oracle database, and more.',
-                        ),
-                        TextSpan(
-                          text:
-                          '\n\nThe versatility of C is by design. It is a low-level language that relates closely to the way machines work while still being easy to learn.',
+                          '\n\nIf you’re interested in front-end web development, this course is a great place to start! You don’t need any previous coding experience, and we have plenty of other courses for you to deepen your knowledge once you’re finished, including CSS and JavaScript.',
                         ),
                       ],
                     ),
@@ -139,7 +135,7 @@ class ClessonPage extends StatelessWidget {
                       Navigator.push(context, MaterialPageRoute<void>(
                         builder: (BuildContext context) {
                           return const Scaffold(
-                            body: ClessonPage2(),
+                            body: bootstrapLessonPage2(),
                           );
                         },
                       ));
@@ -173,8 +169,8 @@ class ClessonPage extends StatelessWidget {
   }
 }
 
-class ClessonPage2 extends StatelessWidget {
-  const ClessonPage2({super.key});
+class bootstrapLessonPage2 extends StatelessWidget {
+  const bootstrapLessonPage2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -250,7 +246,7 @@ class ClessonPage2 extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0),
                     child: Image.network(
-                      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/1200px-C_Programming_Language.svg.png',
+                      'https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png',
                       width: 80,
                       height: 80,
                     ),
@@ -282,7 +278,7 @@ class ClessonPage2 extends StatelessWidget {
                 children: [
                   const Text(
                     textAlign: TextAlign.justify,
-                    'As when learning any new language, the place to start is with the classic "Hello World!" program:',
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
                     style: TextStyle(
                       fontSize: 20.0,
                       color: Color(0xFF003E6D),
@@ -292,7 +288,7 @@ class ClessonPage2 extends StatelessWidget {
                   SizedBox(
                     height: 350,
                     width: 500,
-                    child: Image.network('https://www.fayewilliams.com/wp-content/uploads/2014/12/gedit_hello_world.jpg'),
+                    child: Image.network('https://gohighbrow.com/wp-content/uploads/2016/03/2_2_HTML-and-CSS-Basics.png'),
                   ),
                   RichText(
                     textAlign: TextAlign.justify,
@@ -304,13 +300,13 @@ class ClessonPage2 extends StatelessWidget {
                       ),
                       children: [
                         TextSpan(
-                          text: 'Lets break down the code to understand each line:\n\n#include <stdio.h> The function used for generating output is defined in stdio.h. In order to use the printf function, we need to first include the required file, also called a header file.\n',
+                          text: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n',
                         ),
                         TextSpan(
-                          text: '\nint main() The main() function is the entry point to a program. Curly brackets { } indicate the beginning and end of a function (also called a code block). The statements inside the brackets determine what the function does when executed.\n',
+                          text: '\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.\n',
                         ),
                         TextSpan(
-                          text: '\nThe print function is used to generate output',
+                          text: '\nNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.',
                         ),
                       ],
                     ),
@@ -318,7 +314,7 @@ class ClessonPage2 extends StatelessWidget {
                   SizedBox(
                     height: 350,
                     width: 500,
-                    child: Image.network('https://i.pinimg.com/originals/a0/20/0d/a0200d8de9b8046270ab92af9ef47b6f.png'),
+                    child: Image.network('https://media.geeksforgeeks.org/wp-content/cdn-uploads/Screenshot-5-1.png'),
                   ),
                   RichText(
                     textAlign: TextAlign.justify,
@@ -330,19 +326,13 @@ class ClessonPage2 extends StatelessWidget {
                       ),
                       children: [
                         TextSpan(
-                          text: 'Lets break down the code to understand each line:\n\n#include <stdio.h> The function used for generating output is defined in stdio.h. In order to use the printf function, we need to first include the required file, also called a header file.\n\n',
+                          text: 'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.\n\n',
                         ),
                         TextSpan(
-                          text: 'int main() The main() function is the entry point to a program. Curly brackets { } indicate the beginning and end of a function (also called a code block). The statements inside the brackets determine what the function does when executed.\n\n',
+                          text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.\n\n',
                         ),
                         TextSpan(
-                          text: 'The print function is used to generate output\n\n',
-                        ),
-                        TextSpan(
-                          text: 'Here, we pass the text "Hello World!" to it. The In escape sequence outputs a newline character. Escape sequences always begin with a backslash \\. The semicolon; indicates the end of the statement. Each statement must end with a semicolon.\n\n',
-                        ),
-                        TextSpan(
-                          text: 'return 0; This statement terminates the main () function and returns the value O to the calling process. The number O generally means that our program has successfully executed. Any other number indicates that the program has failed.',
+                          text: 'Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.\n\n',
                         ),
                       ],
                     ),
@@ -353,7 +343,7 @@ class ClessonPage2 extends StatelessWidget {
                       Navigator.push(context, MaterialPageRoute<void>(
                         builder: (BuildContext context) {
                           return const Scaffold(
-                            body: ClessonPage3(),
+                            body: bootstrapLessonPage3(),
                           );
                         },
                       ));
@@ -389,8 +379,8 @@ class ClessonPage2 extends StatelessWidget {
 }
 
 
-class ClessonPage3 extends StatelessWidget {
-  const ClessonPage3({super.key});
+class bootstrapLessonPage3 extends StatelessWidget {
+  const bootstrapLessonPage3({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -466,7 +456,7 @@ class ClessonPage3 extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0),
                     child: Image.network(
-                      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/1200px-C_Programming_Language.svg.png',
+                      'https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png',
                       width: 80,
                       height: 80,
                     ),
@@ -504,26 +494,16 @@ class ClessonPage3 extends StatelessWidget {
                         color: Color(0xFF003E6D),
                         fontWeight: FontWeight.bold,
                       ),
-                      text: 'C supports the following basic data types:',
+                      text: 'HTML supports the following basic data types:',
                       children: [
                         TextSpan(
-                          text: '\n\n• int: integer, a whole number.',
+                          text: '\n\n• Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
                         ),
                         TextSpan(
-                          text: '\n• float: floating point, a number with a fractional part.',
+                          text: '\n• Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
                         ),
                         TextSpan(
-                          text: '\n• double: double-precision floating point value.',
-                        ),
-                        TextSpan(
-                          text: '\n• char: single character.',
-                        ),
-                        TextSpan(
-                          text:
-                          '\n\nThe amount of storage required for each of these types varies by platform. C has a built-in sizeof operator that gives the memory requirements for a particular data type.',
-                        ),
-                        TextSpan(
-                          text: '\n\nFor Example:',
+                          text: '\n• Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
                         ),
                       ],
                     ),
@@ -532,7 +512,7 @@ class ClessonPage3 extends StatelessWidget {
                   SizedBox(
                     height: 350,
                     width: 500,
-                    child: Image.network('https://i.ytimg.com/vi/APXQzZR9dM4/maxresdefault.jpg'),
+                    child: Image.network('https://data-flair.training/blogs/wp-content/uploads/sites/2/2017/06/R-data-types-numerics1.png'),
                   ),
                   RichText(
                     textAlign: TextAlign.justify,
@@ -542,10 +522,9 @@ class ClessonPage3 extends StatelessWidget {
                         color: Color(0xFF003E6D),
                         fontWeight: FontWeight.bold,
                       ),
-                      text: 'The program output displays the corresponding size in bytes for each data type.',
                       children: [
                         TextSpan(
-                          text: 'The print statements in this program have two arguments. The first is the output string with a format specifier (%ld), while the next argument returns the sizeof value. In the final output, the %ld (for long decimal) is replaced by the value in the second argument.',
+                          text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
                         ),
                       ],
                     ),
@@ -556,7 +535,7 @@ class ClessonPage3 extends StatelessWidget {
                       Navigator.push(context, MaterialPageRoute<void>(
                         builder: (BuildContext context) {
                           return const Scaffold(
-                            body: ClessonPage4(),
+                            body: bootstrapLessonPage4(),
                           );
                         },
                       ));
@@ -592,8 +571,8 @@ class ClessonPage3 extends StatelessWidget {
 
 
 
-class ClessonPage4 extends StatelessWidget {
-  const ClessonPage4({super.key});
+class bootstrapLessonPage4 extends StatelessWidget {
+  const bootstrapLessonPage4({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -669,7 +648,7 @@ class ClessonPage4 extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0),
                     child: Image.network(
-                      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/1200px-C_Programming_Language.svg.png',
+                      'https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png',
                       width: 80,
                       height: 80,
                     ),
@@ -710,7 +689,7 @@ class ClessonPage4 extends StatelessWidget {
                       ),
                       children: [
                         TextSpan(
-                          text: 'C supports a number of ways for taking user input. getchar() Returns the value of the next single character input.',
+                          text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
                         ),
                         TextSpan(
                           text: '\n\nFor Example:',
@@ -835,7 +814,7 @@ class ClessonPage4 extends StatelessWidget {
                       Navigator.push(context, MaterialPageRoute<void>(
                         builder: (BuildContext context) {
                           return const Scaffold(
-                            body: ClessonPage5(),
+                            body: bootstrapLessonPage5(),
                           );
                         },
                       ));
@@ -870,8 +849,8 @@ class ClessonPage4 extends StatelessWidget {
 }
 
 
-class ClessonPage5 extends StatelessWidget {
-  const ClessonPage5({super.key});
+class bootstrapLessonPage5 extends StatelessWidget {
+  const bootstrapLessonPage5({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -947,7 +926,7 @@ class ClessonPage5 extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0),
                     child: Image.network(
-                      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/1200px-C_Programming_Language.svg.png',
+                      'https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png',
                       width: 80,
                       height: 80,
                     ),

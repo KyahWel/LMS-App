@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lmsapp/pages/widgets/mainPage.dart';
 
-class htmlLessonPage extends StatelessWidget {
-  const htmlLessonPage({Key? key}) : super(key: key);
+class cssLessonPage extends StatelessWidget {
+  const cssLessonPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +78,7 @@ class htmlLessonPage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0),
                     child: Image.network(
-                      'https://www.w3.org/html/logo/downloads/HTML5_Badge_512.s',
+                      'https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png',
                       width: 80,
                       height: 80,
                     ),
@@ -89,7 +89,7 @@ class htmlLessonPage extends StatelessWidget {
                       child: Align(
                         alignment: Alignment.center,
                         child: Text(
-                          'Introducing HTML',
+                          'Introducing CSS',
                           style: TextStyle(
                             fontSize: 28.0,
                             fontWeight: FontWeight.bold,
@@ -135,7 +135,7 @@ class htmlLessonPage extends StatelessWidget {
                       Navigator.push(context, MaterialPageRoute<void>(
                         builder: (BuildContext context) {
                           return const Scaffold(
-                            body: HTMLlessonPage2(),
+                            body: cssLessonPage2(),
                           );
                         },
                       ));
@@ -169,8 +169,8 @@ class htmlLessonPage extends StatelessWidget {
   }
 }
 
-class HTMLlessonPage2 extends StatelessWidget {
-  const HTMLlessonPage2({super.key});
+class cssLessonPage2 extends StatelessWidget {
+  const cssLessonPage2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -343,7 +343,7 @@ class HTMLlessonPage2 extends StatelessWidget {
                       Navigator.push(context, MaterialPageRoute<void>(
                         builder: (BuildContext context) {
                           return const Scaffold(
-                            body: HTMLlessonPage3(),
+                            body: cssLessonPage3(),
                           );
                         },
                       ));
@@ -379,8 +379,8 @@ class HTMLlessonPage2 extends StatelessWidget {
 }
 
 
-class HTMLlessonPage3 extends StatelessWidget {
-  const HTMLlessonPage3({super.key});
+class cssLessonPage3 extends StatelessWidget {
+  const cssLessonPage3({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -535,7 +535,7 @@ class HTMLlessonPage3 extends StatelessWidget {
                       Navigator.push(context, MaterialPageRoute<void>(
                         builder: (BuildContext context) {
                           return const Scaffold(
-                            body: HTMLlessonPage4(),
+                            body: cssLessonPage4(),
                           );
                         },
                       ));
@@ -571,8 +571,8 @@ class HTMLlessonPage3 extends StatelessWidget {
 
 
 
-class HTMLlessonPage4 extends StatelessWidget {
-  const HTMLlessonPage4({super.key});
+class cssLessonPage4 extends StatelessWidget {
+  const cssLessonPage4({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -814,7 +814,7 @@ class HTMLlessonPage4 extends StatelessWidget {
                       Navigator.push(context, MaterialPageRoute<void>(
                         builder: (BuildContext context) {
                           return const Scaffold(
-                            body: HTMLlessonPage5(),
+                            body: cssLessonPage5(),
                           );
                         },
                       ));
@@ -849,8 +849,8 @@ class HTMLlessonPage4 extends StatelessWidget {
 }
 
 
-class HTMLlessonPage5 extends StatelessWidget {
-  const HTMLlessonPage5({super.key});
+class cssLessonPage5 extends StatelessWidget {
+  const cssLessonPage5({super.key});
 
   @override
   Widget build(BuildContext context) {
