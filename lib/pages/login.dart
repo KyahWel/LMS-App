@@ -26,6 +26,7 @@ class _LoginScreenState extends State<LoginScreen> {
       await FirebaseAuth.instance.signInWithEmailAndPassword(
           email: emailController.text.trim(),
           password: passwordController.text.trim());
+
       Navigator.push(context, MaterialPageRoute<void>(
         builder: (BuildContext context) {
           return const Scaffold(
@@ -122,14 +123,6 @@ class _LoginScreenState extends State<LoginScreen> {
                           signIn();
                           print(emailController.text);
                           print(passwordController.text);
-                          // try{
-                          //     FirebaseAuth.instance.signInWithEmailAndPassword(
-                          //     email: emailController.text,
-                          //     password: passwordController.text);
-                          // }
-                          // catch(e){
-                          //   print('Errpr ')
-                          // }
                         },
                         style: buttonStyle,
                         child: const Padding(
