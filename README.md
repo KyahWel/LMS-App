@@ -64,7 +64,7 @@ $ flutter run
 
 # Contributions
 * **William Cris Hod** - UI Designer and Developer
-* **Franco De Guzman* - UI Designer and Developer
+* **Franco De Guzman** - UI Designer and Developer
 * **Kenneth Brondial** - UI Designer and Developer
 * **Angelo Edrosa** - UI Designer and Developer
 
