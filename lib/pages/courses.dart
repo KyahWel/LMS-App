@@ -12,7 +12,6 @@ class MyCourses extends StatefulWidget {
 }
 
 class _MyCoursesState extends State<MyCourses> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -98,7 +97,7 @@ class _MyCoursesState extends State<MyCourses> {
                     const Color(0xFF83764F),
                     0.58,
                     '14/24',
-                    ClessonPage(),
+                    const ClessonPage(),
                     'Cpage'),
                 buildContainer(
                     'HTML 5',
@@ -106,7 +105,7 @@ class _MyCoursesState extends State<MyCourses> {
                     const Color(0xFFE76161),
                     0.67,
                     '12/18',
-                    htmlLessonPage(), //class name ng page
+                    const htmlLessonPage(), //class name ng page
                     'htmlessonPage'),
                 buildContainer(
                     'Java',
@@ -114,7 +113,7 @@ class _MyCoursesState extends State<MyCourses> {
                     const Color(0xFF8294C4),
                     0.67,
                     '12/18',
-                    javaLessonPage(),
+                    const javaLessonPage(),
                     'javaLessonPage'),
                 buildContainer(
                     'CSS',
@@ -122,15 +121,15 @@ class _MyCoursesState extends State<MyCourses> {
                     const Color(0xFF112D4E),
                     .9,
                     '17/18',
-                    cssLessonPage(),
-                    'htmlessonPage'),
+                    const cssLessonPage(),
+                    'csslessonPage'),
                 buildContainer(
                     'PHP',
                     const Color(0xFF41644A),
                     const Color(0xFF263A29),
                     .5,
                     '9/18',
-                    phpLessonPage(),
+                    const phpLessonPage(),
                     'phpLessonPage'),
                 buildContainer(
                     'Bootstrap',
@@ -138,7 +137,7 @@ class _MyCoursesState extends State<MyCourses> {
                     const Color(0xFFAAC8A7),
                     .8,
                     '16/18',
-                    bootstrapLessonPage(),
+                    const bootstrapLessonPage(),
                     'bootstrapLessonPage'),
               ],
             ),
@@ -177,16 +176,16 @@ class _MyCoursesState extends State<MyCourses> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: EdgeInsets.all(16.0),
+                      padding: const EdgeInsets.all(16.0),
                       child: Text(
                         text,
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontSize: 22, fontWeight: FontWeight.bold),
                       ),
                     ),
                     const SizedBox(height: 10),
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 16.0),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(10),
                         child: LinearProgressIndicator(
