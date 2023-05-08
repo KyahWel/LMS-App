@@ -9,7 +9,9 @@ class javaLessonPage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          const SizedBox(height: 40.0,),
+          const SizedBox(
+            height: 40.0,
+          ),
           Row(
             children: [
               Row(
@@ -24,7 +26,8 @@ class javaLessonPage extends StatelessWidget {
                       width: 90,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(24.0),
-                        color: const Color(0xFF003E6D), // set the background color here
+                        color: const Color(
+                            0xFF003E6D), // set the background color here
                       ),
                       child: Row(
                         children: const [
@@ -43,7 +46,10 @@ class javaLessonPage extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 16 , width: 200,),
+              const SizedBox(
+                height: 16,
+                width: 200,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: const [
@@ -101,7 +107,6 @@ class javaLessonPage extends StatelessWidget {
                   ),
                 ],
               ),
-
             ),
           ),
           Expanded(
@@ -120,11 +125,11 @@ class javaLessonPage extends StatelessWidget {
                       children: [
                         TextSpan(
                           text:
-                          'Java technology is a language of programming as well as a platform. Java is a high level, robust, secured and object-oriented programming language. And any hardware or software environment in which a program runs is known as a platform. Since Java has its own runtime environment (JRE) and API, it is called a platform.',
+                              'Java technology is a language of programming as well as a platform. Java is a high level, robust, secured and object-oriented programming language. And any hardware or software environment in which a program runs is known as a platform. Since Java has its own runtime environment (JRE) and API, it is called a platform.',
                         ),
                         TextSpan(
                           text:
-                          '\n\nJava is a popular programming language, created in 1995. It is owned by Oracle, and more than 3 billion devices run Java.',
+                              '\n\nJava is a popular programming language, created in 1995. It is owned by Oracle, and more than 3 billion devices run Java.',
                         ),
                       ],
                     ),
@@ -141,11 +146,13 @@ class javaLessonPage extends StatelessWidget {
                       ));
                     },
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(const Color(0xFF003E6D)),
-                      foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                      backgroundColor: MaterialStateProperty.all<Color>(
+                          const Color(0xFF003E6D)),
+                      foregroundColor:
+                          MaterialStateProperty.all<Color>(Colors.white),
                       padding: MaterialStateProperty.all<EdgeInsets>(
-                          const EdgeInsets.symmetric(vertical: 23.0, horizontal: 130.0)
-                      ),
+                          const EdgeInsets.symmetric(
+                              vertical: 23.0, horizontal: 130.0)),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(24.0),
@@ -177,7 +184,9 @@ class javaLessonPage2 extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          const SizedBox(height: 40.0,),
+          const SizedBox(
+            height: 40.0,
+          ),
           Row(
             children: [
               Row(
@@ -192,7 +201,8 @@ class javaLessonPage2 extends StatelessWidget {
                       width: 90,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(24.0),
-                        color: const Color(0xFF003E6D), // set the background color here
+                        color: const Color(
+                            0xFF003E6D), // set the background color here
                       ),
                       child: Row(
                         children: const [
@@ -211,7 +221,10 @@ class javaLessonPage2 extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 16 , width: 200,),
+              const SizedBox(
+                height: 16,
+                width: 200,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: const [
@@ -288,7 +301,8 @@ class javaLessonPage2 extends StatelessWidget {
                   SizedBox(
                     height: 350,
                     width: 500,
-                    child: Image.network('https://gohighbrow.com/wp-content/uploads/2016/03/2_2_HTML-and-CSS-Basics.png'),
+                    child: Image.network(
+                        'https://gohighbrow.com/wp-content/uploads/2016/03/2_2_HTML-and-CSS-Basics.png'),
                   ),
                   RichText(
                     textAlign: TextAlign.justify,
@@ -300,13 +314,16 @@ class javaLessonPage2 extends StatelessWidget {
                       ),
                       children: [
                         TextSpan(
-                          text: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n',
+                          text:
+                              'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n',
                         ),
                         TextSpan(
-                          text: '\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.\n',
+                          text:
+                              '\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.\n',
                         ),
                         TextSpan(
-                          text: '\nNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.',
+                          text:
+                              '\nNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.',
                         ),
                       ],
                     ),
@@ -314,7 +331,8 @@ class javaLessonPage2 extends StatelessWidget {
                   SizedBox(
                     height: 350,
                     width: 500,
-                    child: Image.network('https://media.geeksforgeeks.org/wp-content/cdn-uploads/Screenshot-5-1.png'),
+                    child: Image.network(
+                        'https://media.geeksforgeeks.org/wp-content/cdn-uploads/Screenshot-5-1.png'),
                   ),
                   RichText(
                     textAlign: TextAlign.justify,
@@ -326,13 +344,16 @@ class javaLessonPage2 extends StatelessWidget {
                       ),
                       children: [
                         TextSpan(
-                          text: 'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.\n\n',
+                          text:
+                              'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.\n\n',
                         ),
                         TextSpan(
-                          text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.\n\n',
+                          text:
+                              'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.\n\n',
                         ),
                         TextSpan(
-                          text: 'Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.\n\n',
+                          text:
+                              'Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.\n\n',
                         ),
                       ],
                     ),
@@ -349,11 +370,13 @@ class javaLessonPage2 extends StatelessWidget {
                       ));
                     },
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(const Color(0xFF003E6D)),
-                      foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                      backgroundColor: MaterialStateProperty.all<Color>(
+                          const Color(0xFF003E6D)),
+                      foregroundColor:
+                          MaterialStateProperty.all<Color>(Colors.white),
                       padding: MaterialStateProperty.all<EdgeInsets>(
-                          const EdgeInsets.symmetric(vertical: 23.0, horizontal: 130.0)
-                      ),
+                          const EdgeInsets.symmetric(
+                              vertical: 23.0, horizontal: 130.0)),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(24.0),
@@ -378,7 +401,6 @@ class javaLessonPage2 extends StatelessWidget {
   }
 }
 
-
 class javaLessonPage3 extends StatelessWidget {
   const javaLessonPage3({super.key});
 
@@ -387,7 +409,9 @@ class javaLessonPage3 extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          const SizedBox(height: 40.0,),
+          const SizedBox(
+            height: 40.0,
+          ),
           Row(
             children: [
               Row(
@@ -402,7 +426,8 @@ class javaLessonPage3 extends StatelessWidget {
                       width: 90,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(24.0),
-                        color: const Color(0xFF003E6D), // set the background color here
+                        color: const Color(
+                            0xFF003E6D), // set the background color here
                       ),
                       child: Row(
                         children: const [
@@ -421,7 +446,10 @@ class javaLessonPage3 extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 16 , width: 200,),
+              const SizedBox(
+                height: 16,
+                width: 200,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: const [
@@ -497,13 +525,16 @@ class javaLessonPage3 extends StatelessWidget {
                       text: 'HTML supports the following basic data types:',
                       children: [
                         TextSpan(
-                          text: '\n\n• Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                          text:
+                              '\n\n• Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
                         ),
                         TextSpan(
-                          text: '\n• Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+                          text:
+                              '\n• Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
                         ),
                         TextSpan(
-                          text: '\n• Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+                          text:
+                              '\n• Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
                         ),
                       ],
                     ),
@@ -512,7 +543,8 @@ class javaLessonPage3 extends StatelessWidget {
                   SizedBox(
                     height: 350,
                     width: 500,
-                    child: Image.network('https://data-flair.training/blogs/wp-content/uploads/sites/2/2017/06/R-data-types-numerics1.png'),
+                    child: Image.network(
+                        'https://data-flair.training/blogs/wp-content/uploads/sites/2/2017/06/R-data-types-numerics1.png'),
                   ),
                   RichText(
                     textAlign: TextAlign.justify,
@@ -524,7 +556,8 @@ class javaLessonPage3 extends StatelessWidget {
                       ),
                       children: [
                         TextSpan(
-                          text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
+                          text:
+                              'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
                         ),
                       ],
                     ),
@@ -541,11 +574,13 @@ class javaLessonPage3 extends StatelessWidget {
                       ));
                     },
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(const Color(0xFF003E6D)),
-                      foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                      backgroundColor: MaterialStateProperty.all<Color>(
+                          const Color(0xFF003E6D)),
+                      foregroundColor:
+                          MaterialStateProperty.all<Color>(Colors.white),
                       padding: MaterialStateProperty.all<EdgeInsets>(
-                          const EdgeInsets.symmetric(vertical: 23.0, horizontal: 130.0)
-                      ),
+                          const EdgeInsets.symmetric(
+                              vertical: 23.0, horizontal: 130.0)),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(24.0),
@@ -569,8 +604,6 @@ class javaLessonPage3 extends StatelessWidget {
   }
 }
 
-
-
 class javaLessonPage4 extends StatelessWidget {
   const javaLessonPage4({super.key});
 
@@ -579,7 +612,9 @@ class javaLessonPage4 extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          const SizedBox(height: 40.0,),
+          const SizedBox(
+            height: 40.0,
+          ),
           Row(
             children: [
               Row(
@@ -594,7 +629,8 @@ class javaLessonPage4 extends StatelessWidget {
                       width: 90,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(24.0),
-                        color: const Color(0xFF003E6D), // set the background color here
+                        color: const Color(
+                            0xFF003E6D), // set the background color here
                       ),
                       child: Row(
                         children: const [
@@ -613,7 +649,10 @@ class javaLessonPage4 extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 16 , width: 200,),
+              const SizedBox(
+                height: 16,
+                width: 200,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: const [
@@ -689,7 +728,8 @@ class javaLessonPage4 extends StatelessWidget {
                       ),
                       children: [
                         TextSpan(
-                          text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+                          text:
+                              'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
                         ),
                         TextSpan(
                           text: '\n\nFor Example:',
@@ -701,7 +741,8 @@ class javaLessonPage4 extends StatelessWidget {
                   SizedBox(
                     height: 350,
                     width: 500,
-                    child: Image.network('https://easycodebook.com/wp-content/uploads/2019/06/array-of-numbers-input-output-c-code.jpg'),
+                    child: Image.network(
+                        'https://easycodebook.com/wp-content/uploads/2019/06/array-of-numbers-input-output-c-code.jpg'),
                   ),
                   const SizedBox(height: 16.0),
                   RichText(
@@ -717,7 +758,8 @@ class javaLessonPage4 extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
-                          text: '\n\nThe gets() function is used to read input as an ordered sequence of characters, also called a string. A string is stored in a char array',
+                          text:
+                              '\n\nThe gets() function is used to read input as an ordered sequence of characters, also called a string. A string is stored in a char array',
                           style: TextStyle(
                             fontSize: 20.0,
                             color: Color(0xFF003E6D),
@@ -739,7 +781,8 @@ class javaLessonPage4 extends StatelessWidget {
                   SizedBox(
                     height: 350,
                     width: 500,
-                    child: Image.network('https://i.ytimg.com/vi/-rNW_rpkuoQ/maxresdefault.jpg'),
+                    child: Image.network(
+                        'https://i.ytimg.com/vi/-rNW_rpkuoQ/maxresdefault.jpg'),
                   ),
                   const SizedBox(height: 8.0),
                   const Text(
@@ -755,7 +798,8 @@ class javaLessonPage4 extends StatelessWidget {
                   SizedBox(
                     height: 350,
                     width: 500,
-                    child: Image.network('https://i0.wp.com/erpconsultors.com/wp-content/uploads/2022/02/Sample-C-language-code-for-scanf.png?resize=553%2C311&ssl=1'),
+                    child: Image.network(
+                        'https://i0.wp.com/erpconsultors.com/wp-content/uploads/2022/02/Sample-C-language-code-for-scanf.png?resize=553%2C311&ssl=1'),
                   ),
                   const SizedBox(height: 16.0),
                   RichText(
@@ -768,7 +812,8 @@ class javaLessonPage4 extends StatelessWidget {
                       ),
                       children: [
                         TextSpan(
-                          text: 'The & sign before the variable name is the address operator. ',
+                          text:
+                              'The & sign before the variable name is the address operator. ',
                           style: TextStyle(
                             fontSize: 20.0,
                             color: Color(0xFF003E6D),
@@ -776,7 +821,8 @@ class javaLessonPage4 extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
-                          text: 'It gives the address, or location in memory, of a variable. ',
+                          text:
+                              'It gives the address, or location in memory, of a variable. ',
                           style: TextStyle(
                             fontSize: 20.0,
                             color: Color(0xFF003E6D),
@@ -784,7 +830,8 @@ class javaLessonPage4 extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
-                          text: 'This is needed because scanf places an input value at a variable address',
+                          text:
+                              'This is needed because scanf places an input value at a variable address',
                           style: TextStyle(
                             fontSize: 20.0,
                             color: Color(0xFF003E6D),
@@ -792,7 +839,8 @@ class javaLessonPage4 extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
-                          text: '\n\nAs another example, let’s prompt for two integer inputs and output their sum:',
+                          text:
+                              '\n\nAs another example, let’s prompt for two integer inputs and output their sum:',
                           style: TextStyle(
                             fontSize: 20.0,
                             color: Color(0xFF003E6D),
@@ -806,7 +854,8 @@ class javaLessonPage4 extends StatelessWidget {
                   SizedBox(
                     height: 350,
                     width: 500,
-                    child: Image.network('https://2.bp.blogspot.com/-qd8edRcx4U0/WhvSLEcLT8I/AAAAAAAAAZk/tRg18ptDHuQT-p4tCtXO56j1GmxuRUWEACLcBGAs/s1600/Screenshot%2B%2528108%2529.png'),
+                    child: Image.network(
+                        'https://2.bp.blogspot.com/-qd8edRcx4U0/WhvSLEcLT8I/AAAAAAAAAZk/tRg18ptDHuQT-p4tCtXO56j1GmxuRUWEACLcBGAs/s1600/Screenshot%2B%2528108%2529.png'),
                   ),
                   const SizedBox(height: 16.0),
                   ElevatedButton(
@@ -820,11 +869,13 @@ class javaLessonPage4 extends StatelessWidget {
                       ));
                     },
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(const Color(0xFF003E6D)),
-                      foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                      backgroundColor: MaterialStateProperty.all<Color>(
+                          const Color(0xFF003E6D)),
+                      foregroundColor:
+                          MaterialStateProperty.all<Color>(Colors.white),
                       padding: MaterialStateProperty.all<EdgeInsets>(
-                          const EdgeInsets.symmetric(vertical: 23.0, horizontal: 130.0)
-                      ),
+                          const EdgeInsets.symmetric(
+                              vertical: 23.0, horizontal: 130.0)),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(24.0),
@@ -848,7 +899,6 @@ class javaLessonPage4 extends StatelessWidget {
   }
 }
 
-
 class javaLessonPage5 extends StatelessWidget {
   const javaLessonPage5({super.key});
 
@@ -857,7 +907,9 @@ class javaLessonPage5 extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          const SizedBox(height: 40.0,),
+          const SizedBox(
+            height: 40.0,
+          ),
           Row(
             children: [
               Row(
@@ -872,7 +924,8 @@ class javaLessonPage5 extends StatelessWidget {
                       width: 90,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(24.0),
-                        color: const Color(0xFF003E6D), // set the background color here
+                        color: const Color(
+                            0xFF003E6D), // set the background color here
                       ),
                       child: Row(
                         children: const [
@@ -891,7 +944,10 @@ class javaLessonPage5 extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 16 , width: 200,),
+              const SizedBox(
+                height: 16,
+                width: 200,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: const [
@@ -966,10 +1022,12 @@ class javaLessonPage5 extends StatelessWidget {
                       ),
                       children: [
                         TextSpan(
-                          text: 'Comments are explanatory information that you can include in a program to benefit the reader of your code. The compiler ignores comments, so they have no affect on a program.\n\n',
+                          text:
+                              'Comments are explanatory information that you can include in a program to benefit the reader of your code. The compiler ignores comments, so they have no affect on a program.\n\n',
                         ),
                         TextSpan(
-                          text: 'A comment starts with a slash asterisk /* and ends with an asterisk slash */ and can be anywhere in your code. Comments can be on the same line as statement, or they can span several lines.\n',
+                          text:
+                              'A comment starts with a slash asterisk /* and ends with an asterisk slash */ and can be anywhere in your code.Comments can be on the same line as statement, or they can span several lines.\n',
                         ),
                       ],
                     ),
@@ -978,7 +1036,8 @@ class javaLessonPage5 extends StatelessWidget {
                   SizedBox(
                     height: 350,
                     width: 500,
-                    child: Image.network('https://www.tutorialgateway.org/wp-content/uploads/Comments-in-C-2.png?ezimgfmt=ng:webp/ngcb222'),
+                    child: Image.network(
+                        'https://www.tutorialgateway.org/wp-content/uploads/Comments-in-C-2.png?ezimgfmt=ng:webp/ngcb222'),
                   ),
                   const SizedBox(height: 16.0),
                   ElevatedButton(
@@ -992,11 +1051,13 @@ class javaLessonPage5 extends StatelessWidget {
                       ));
                     },
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(const Color(0xFF003E6D)),
-                      foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                      backgroundColor: MaterialStateProperty.all<Color>(
+                          const Color(0xFF003E6D)),
+                      foregroundColor:
+                          MaterialStateProperty.all<Color>(Colors.white),
                       padding: MaterialStateProperty.all<EdgeInsets>(
-                          const EdgeInsets.symmetric(vertical: 23.0, horizontal: 130.0)
-                      ),
+                          const EdgeInsets.symmetric(
+                              vertical: 23.0, horizontal: 130.0)),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(24.0),
