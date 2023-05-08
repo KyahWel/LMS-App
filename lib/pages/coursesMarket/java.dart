@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lmsapp/pages/coursesPayment/CheckoutPython.dart';
 import 'package:lmsapp/pages/coursesPayment/CheckoutJava.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class javaMarket extends StatefulWidget {
   const javaMarket({super.key});
@@ -10,6 +11,22 @@ class javaMarket extends StatefulWidget {
 }
 
 class _javaMarketState extends State<javaMarket> {
+  final videoURL = 'https://www.youtube.com/watch?v=l9AzO1FMgM8';
+  late YoutubePlayerController _controller;
+
+  @override
+  void initState() {
+    final videoID = YoutubePlayer.convertUrlToId(videoURL);
+    _controller = YoutubePlayerController(
+        initialVideoId: videoID!,
+        flags: const YoutubePlayerFlags(
+          autoPlay: true,
+          loop: true,
+        ));
+
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,6 +81,15 @@ class _javaMarketState extends State<javaMarket> {
                     ),
                   ),
                 ),
+                Container(
+                    width: 600,
+                    height: 200,
+                    child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: YoutubePlayer(
+                          controller: _controller,
+                          showVideoProgressIndicator: true,
+                        ))),
                 Container(
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
