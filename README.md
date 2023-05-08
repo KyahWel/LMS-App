@@ -48,12 +48,11 @@ $ flutter run
 <img src="https://user-images.githubusercontent.com/73891177/236408341-43157fd4-6c00-4c75-952d-53957e9eee7e.jpg" alt="image" width="30%" height="30%">
 <img src="https://user-images.githubusercontent.com/73891177/236408352-26a886c3-138c-496b-99a6-fedff77f368f.jpg" alt="image" width="30%" height="30%">
 
-
 ## Courses Marketplace page
 <img src="https://user-images.githubusercontent.com/73891177/236408426-75653585-8264-43ec-b083-d0f7206ec677.jpg" width="30%" height="30%">
 
 ### Course Description
-<img src="https://user-images.githubusercontent.com/73891177/236408522-8917fe01-ee0b-4032-bff1-e1715b94b092.jpg" width="30%" height="30%">
+<img src="https://user-images.githubusercontent.com/73891177/236716463-06c35d1b-89fb-4107-a246-abd706ae9158.jpg" width="30%" height="30%">
 
 ### Checkout and payout page
 <img src="https://user-images.githubusercontent.com/73891177/236408606-e67d6800-a7dd-4517-ae2b-71e905f9e2b0.jpg" width="30%" height="30%">
