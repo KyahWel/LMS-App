@@ -741,12 +741,8 @@ class HTMLlessonPage4 extends StatelessWidget {
                   SizedBox(
                     height: 350,
                     width: 500,
-<<<<<<< Updated upstream
-                    child: Image.network('https://www.simplilearn.com/ice9/free_resources_article_thumb/single-line-text.PNG'),
-=======
                     child: Image.network(
-                        'https://easycodebook.com/wp-content/uploads/2019/06/array-of-numbers-input-output-c-code.jpg'),
->>>>>>> Stashed changes
+                        'https://www.simplilearn.com/ice9/free_resources_article_thumb/single-line-text.PNG'),
                   ),
                   const SizedBox(height: 16.0),
                   RichText(
@@ -762,12 +758,8 @@ class HTMLlessonPage4 extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
-<<<<<<< Updated upstream
-                          text: '\n\nEt harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.',
-=======
                           text:
-                              '\n\nThe gets() function is used to read input as an ordered sequence of characters, also called a string. A string is stored in a char array',
->>>>>>> Stashed changes
+                              '\n\nEt harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.',
                           style: TextStyle(
                             fontSize: 20.0,
                             color: Color(0xFF003E6D),
@@ -789,12 +781,8 @@ class HTMLlessonPage4 extends StatelessWidget {
                   SizedBox(
                     height: 350,
                     width: 500,
-<<<<<<< Updated upstream
-                    child: Image.network('https://www.simplilearn.com/ice9/free_resources_article_thumb/single-line-text.PNG'),
-=======
                     child: Image.network(
-                        'https://i.ytimg.com/vi/-rNW_rpkuoQ/maxresdefault.jpg'),
->>>>>>> Stashed changes
+                        'https://www.simplilearn.com/ice9/free_resources_article_thumb/single-line-text.PNG'),
                   ),
                   const SizedBox(height: 8.0),
                   const Text(
@@ -810,12 +798,8 @@ class HTMLlessonPage4 extends StatelessWidget {
                   SizedBox(
                     height: 350,
                     width: 500,
-<<<<<<< Updated upstream
-                    child: Image.network('https://www.simplilearn.com/ice9/free_resources_article_thumb/checkbox-and-button.PNG'),
-=======
                     child: Image.network(
-                        'https://i0.wp.com/erpconsultors.com/wp-content/uploads/2022/02/Sample-C-language-code-for-scanf.png?resize=553%2C311&ssl=1'),
->>>>>>> Stashed changes
+                        'https://www.simplilearn.com/ice9/free_resources_article_thumb/checkbox-and-button.PNG'),
                   ),
                   const SizedBox(height: 16.0),
                   RichText(
@@ -828,30 +812,8 @@ class HTMLlessonPage4 extends StatelessWidget {
                       ),
                       children: [
                         TextSpan(
-<<<<<<< Updated upstream
-                          text: 'Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.',
-=======
                           text:
-                              'The & sign before the variable name is the address operator. ',
-                          style: TextStyle(
-                            fontSize: 20.0,
-                            color: Color(0xFF003E6D),
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        TextSpan(
-                          text:
-                              'It gives the address, or location in memory, of a variable. ',
-                          style: TextStyle(
-                            fontSize: 20.0,
-                            color: Color(0xFF003E6D),
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        TextSpan(
-                          text:
-                              'This is needed because scanf places an input value at a variable address',
->>>>>>> Stashed changes
+                              'Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.',
                           style: TextStyle(
                             fontSize: 20.0,
                             color: Color(0xFF003E6D),
@@ -874,12 +836,8 @@ class HTMLlessonPage4 extends StatelessWidget {
                   SizedBox(
                     height: 350,
                     width: 500,
-<<<<<<< Updated upstream
-                    child: Image.network('https://www.simplilearn.com/ice9/free_resources_article_thumb/input-text.PNG'),
-=======
                     child: Image.network(
-                        'https://2.bp.blogspot.com/-qd8edRcx4U0/WhvSLEcLT8I/AAAAAAAAAZk/tRg18ptDHuQT-p4tCtXO56j1GmxuRUWEACLcBGAs/s1600/Screenshot%2B%2528108%2529.png'),
->>>>>>> Stashed changes
+                        'https://www.simplilearn.com/ice9/free_resources_article_thumb/input-text.PNG'),
                   ),
                   const SizedBox(height: 16.0),
                   ElevatedButton(
@@ -1046,19 +1004,12 @@ class HTMLlessonPage5 extends StatelessWidget {
                       ),
                       children: [
                         TextSpan(
-<<<<<<< Updated upstream
-                          text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.\n\n',
-                        ),
-                        TextSpan(
-                          text: 'Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus..\n',
-=======
                           text:
-                              'Comments are explanatory information that you can include in a program to benefit the reader of your code. The compiler ignores comments, so they have no affect on a program.\n\n',
+                              'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.\n\n',
                         ),
                         TextSpan(
                           text:
-                              'A comment starts with a slash asterisk /* and ends with an asterisk slash */ and can be anywhere in your code.Comments can be on the same line as statement, or they can span several lines.\n',
->>>>>>> Stashed changes
+                              'Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus..\n',
                         ),
                       ],
                     ),
@@ -1067,12 +1018,8 @@ class HTMLlessonPage5 extends StatelessWidget {
                   SizedBox(
                     height: 350,
                     width: 500,
-<<<<<<< Updated upstream
-                    child: Image.network('https://www.simplilearn.com/ice9/free_resources_article_thumb/multi_line_comments.PNG'),
-=======
                     child: Image.network(
-                        'https://www.tutorialgateway.org/wp-content/uploads/Comments-in-C-2.png?ezimgfmt=ng:webp/ngcb222'),
->>>>>>> Stashed changes
+                        'https://www.simplilearn.com/ice9/free_resources_article_thumb/multi_line_comments.PNG'),
                   ),
                   const SizedBox(height: 16.0),
                   ElevatedButton(

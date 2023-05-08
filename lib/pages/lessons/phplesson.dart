@@ -125,19 +125,11 @@ class phpLessonPage extends StatelessWidget {
                       children: [
                         TextSpan(
                           text:
-<<<<<<< Updated upstream
-                          'PHP stands for Hypertext Preprocessor. It is an open-source server-side scripting language used for dynamic web development and can be embedded into HTML codes.',
+                              'PHP stands for Hypertext Preprocessor. It is an open-source server-side scripting language used for dynamic web development and can be embedded into HTML codes.',
                         ),
                         TextSpan(
                           text:
-                          '\n\nPHP is a server side scripting language that is embedded in HTML. It is used to manage dynamic content, databases, session tracking, even build entire e-commerce sites. It is integrated with a number of popular databases, including MySQL, PostgreSQL, Oracle, Sybase, Informix, and Microsoft SQL Server.',
-=======
-                              'HTML is at the core of every web page. It’s beginner-friendly and knowing the basics is useful for everyone who works in digital design, marketing, content and more.',
-                        ),
-                        TextSpan(
-                          text:
-                              '\n\nIf you’re interested in front-end web development, this course is a great place to start! You don’t need any previous coding experience, and we have plenty of other courses for you to deepen your knowledge once you’re finished, including CSS and JavaScript.',
->>>>>>> Stashed changes
+                              '\n\nPHP is a server side scripting language that is embedded in HTML. It is used to manage dynamic content, databases, session tracking, even build entire e-commerce sites. It is integrated with a number of popular databases, including MySQL, PostgreSQL, Oracle, Sybase, Informix, and Microsoft SQL Server.',
                         ),
                       ],
                     ),

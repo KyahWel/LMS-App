@@ -125,19 +125,11 @@ class cssLessonPage extends StatelessWidget {
                       children: [
                         TextSpan(
                           text:
-<<<<<<< Updated upstream
-                          'Ever seen a website and thought “Wow, that’s beautiful”? Chances are that a CSS whiz had a hand in creating it! If you’re interested in visual design, CSS is the perfect language for you.',
+                              'Ever seen a website and thought “Wow, that’s beautiful”? Chances are that a CSS whiz had a hand in creating it! If you’re interested in visual design, CSS is the perfect language for you.',
                         ),
                         TextSpan(
                           text:
-                          '\n\nCSS is also great for those interested in front-end web development. It’s an essential tool for styling web content, and is used to define the visual appearance of design and layout variations for different screen and device sizes. CSS is a perfect partner for those learning HTML and JavaScript. It’s simple to learn, so you’ll be crafting your own beautiful digital experiences in no time!',
-=======
-                              'HTML is at the core of every web page. It’s beginner-friendly and knowing the basics is useful for everyone who works in digital design, marketing, content and more.',
-                        ),
-                        TextSpan(
-                          text:
-                              '\n\nIf you’re interested in front-end web development, this course is a great place to start! You don’t need any previous coding experience, and we have plenty of other courses for you to deepen your knowledge once you’re finished, including CSS and JavaScript.',
->>>>>>> Stashed changes
+                              '\n\nCSS is also great for those interested in front-end web development. It’s an essential tool for styling web content, and is used to define the visual appearance of design and layout variations for different screen and device sizes. CSS is a perfect partner for those learning HTML and JavaScript. It’s simple to learn, so you’ll be crafting your own beautiful digital experiences in no time!',
                         ),
                       ],
                     ),

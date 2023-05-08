@@ -125,19 +125,11 @@ class javaLessonPage extends StatelessWidget {
                       children: [
                         TextSpan(
                           text:
-<<<<<<< Updated upstream
-                          'Java technology is a language of programming as well as a platform. Java is a high level, robust, secured and object-oriented programming language. And any hardware or software environment in which a program runs is known as a platform. Since Java has its own runtime environment (JRE) and API, it is called a platform.',
+                              'Java technology is a language of programming as well as a platform. Java is a high level, robust, secured and object-oriented programming language. And any hardware or software environment in which a program runs is known as a platform. Since Java has its own runtime environment (JRE) and API, it is called a platform.',
                         ),
                         TextSpan(
                           text:
-                          '\n\nJava is a popular programming language, created in 1995. It is owned by Oracle, and more than 3 billion devices run Java.',
-=======
-                              'HTML is at the core of every web page. It’s beginner-friendly and knowing the basics is useful for everyone who works in digital design, marketing, content and more.',
-                        ),
-                        TextSpan(
-                          text:
-                              '\n\nIf you’re interested in front-end web development, this course is a great place to start! You don’t need any previous coding experience, and we have plenty of other courses for you to deepen your knowledge once you’re finished, including CSS and JavaScript.',
->>>>>>> Stashed changes
+                              '\n\nJava is a popular programming language, created in 1995. It is owned by Oracle, and more than 3 billion devices run Java.',
                         ),
                       ],
                     ),
